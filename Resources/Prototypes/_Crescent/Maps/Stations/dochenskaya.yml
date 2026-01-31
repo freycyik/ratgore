@@ -20,7 +20,7 @@
           overflowJobs: []
           availableJobs: #10 total
             ForemanNCSP: [ 1, 1 ]
-            ShipbreakerNCSP: [ 5, 5 ]
+            ShipbreakerNCSP: [ 8, 8 ]
 
 
 
