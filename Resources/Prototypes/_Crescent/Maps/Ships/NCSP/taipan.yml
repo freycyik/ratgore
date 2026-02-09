@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Taipan
-  name: КВСТ Тайпан
+  name: ТК Тайпан
   description: Многоцелевой вооруженный корвет.
   price: 60000
   category: Medium
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Taipan
-  mapName: 'КВСТ Тайпан'
+  mapName: 'ТК Тайпан'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/taipan.yml
   minPlayers: 0
   stations:

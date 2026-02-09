@@ -4,52 +4,225 @@ on:
   pull_request_target:
     types: [closed]
 
+# Global environment variables
 env:
-  GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-  CHANGELOG_DIR: ${{ vars.CHANGELOG_DIR }}
+  # Hardcode the changelog path to avoid variable issues
+  CHANGELOG_DIR: ${{ github.workspace }}/Resources/Changelog/rat.yml
+  # PR number from GitHub event
   PR_NUMBER: ${{ github.event.number }}
+  # Repository name (for API calls)
+  GITHUB_REPOSITORY: ${{ github.repository }}
 
 jobs:
   changelog:
     runs-on: ubuntu-latest
+
+    # Only run for merged PRs
     if: github.event.pull_request.merged == true
+
+    # Required permissions
     permissions:
       contents: write
+      pull-requests: read
+
     steps:
-    - name: Checkout Master
-      uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.BOT_TOKEN }}
-        ref: ${{ vars.CHANGELOG_BRANCH }}
-
-    - name: Setup Git
+    # ========== STEP 1: INITIAL DEBUG ==========
+    - name: Initial Debug Information
       run: |
-        git config --global user.name "${{ vars.CHANGELOG_USER }}"
-        git config --global user.email "${{ vars.CHANGELOG_EMAIL }}"
-      shell: bash
+        echo "=== INITIAL DEBUG INFO ==="
+        echo "Workflow triggered by: ${{ github.event_name }}"
+        echo "PR Number: ${{ env.PR_NUMBER }}"
+        echo "PR Merged: ${{ github.event.pull_request.merged }}"
+        echo "Repository: ${{ env.GITHUB_REPOSITORY }}"
+        echo "Changelog Dir: ${{ env.CHANGELOG_DIR }}"
+        echo "GitHub Actor: ${{ github.actor }}"
+        echo "GitHub Ref: ${{ github.ref }}"
+        echo "=== END DEBUG ==="
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
+    # ========== STEP 2: CHECKOUT CODE ==========
+    - name: Checkout Master Branch
+      uses: actions/checkout@v6
+      with:
+        # Use built-in GitHub token (automatically provided)
+        token: ${{ secrets.GH_PAT }}
+        # Checkout master branch explicitly
+        ref: master
+        # Full history needed for proper git operations
+        fetch-depth: 0
+        # Clean working directory
+        clean: true
+
+    # ========== STEP 3: POST-CHECKOUT DEBUG ==========
+    - name: Post-Checkout Verification
+      run: |
+        echo "=== POST-CHECKOUT DEBUG ==="
+        echo "Current directory: $(pwd)"
+        echo "Directory contents:"
+        ls -la
+        echo ""
+        echo "Git status:"
+        git status
+        echo ""
+        echo "Git remote:"
+        git remote -v
+        echo ""
+        echo "Git branch:"
+        git branch -a
+        echo ""
+        echo "Checking if changelog directory exists:"
+        if [ -f "${{ env.CHANGELOG_DIR }}" ]; then
+          echo "✓ Changelog file exists at: ${{ env.CHANGELOG_DIR }}"
+          echo "File size: $(wc -l < "${{ env.CHANGELOG_DIR }}") lines"
+          echo "First 10 lines:"
+          head -10 "${{ env.CHANGELOG_DIR }}"
+        else
+          echo "✗ Changelog file NOT FOUND at: ${{ env.CHANGELOG_DIR }}"
+          echo "Looking for changelog files:"
+          find . -name "*.yml" -o -name "*.yaml" | grep -i changelog | head -10
+        fi
+        echo ""
+        echo "Checking Tools/changelogs directory:"
+        if [ -d "Tools/changelogs" ]; then
+          echo "✓ Tools/changelogs directory exists"
+          ls -la Tools/changelogs/
+          echo ""
+          echo "Contents of changelog.js:"
+          cat Tools/changelogs/changelog.js | head -50
+        else
+          echo "✗ Tools/changelogs directory NOT FOUND"
+        fi
+        echo "=== END POST-CHECKOUT DEBUG ==="
+
+    # ========== STEP 4: SETUP GIT CONFIG ==========
+    - name: Setup Git Configuration
+      run: |
+        echo "=== SETTING UP GIT ==="
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        echo "Git user configured:"
+        git config --global user.name
+        git config --global user.email
+        echo "=== GIT SETUP COMPLETE ==="
+
+    # ========== STEP 5: SETUP NODE ==========
+    - name: Setup Node.js Environment
+      uses: actions/setup-node@v4
       with:
         node-version: 18.x
 
-    - name: Install Dependencies
+    # ========== STEP 6: INSTALL DEPENDENCIES ==========
+    - name: Install NPM Dependencies
       run: |
-        cd "Tools/changelogs"
-        npm install
-      shell: bash
+        echo "=== INSTALLING DEPENDENCIES ==="
+        echo "Current directory: $(pwd)"
+        echo "Changing to Tools/changelogs directory"
+        cd Tools/changelogs
 
-    - name: Generate Changelog
-      run: |
-        cd "Tools/changelogs"
-        node changelog.js
-      shell: bash
+        echo "Package.json contents:"
+        cat package.json || echo "No package.json found"
+        echo ""
 
-    - name: Commit Changelog
+        echo "Installing dependencies..."
+        npm install --loglevel=verbose
+
+        echo "Installed packages:"
+        npm list --depth=0
+
+        echo "=== DEPENDENCIES INSTALLED ==="
+
+    # ========== STEP 7: GENERATE CHANGELOG ==========
+    - name: Generate Changelog Entry
+      env:
+        # Pass environment variables explicitly
+        GH_PAT: ${{ secrets.GH_PAT }}
+        CHANGELOG_DIR: ${{ env.CHANGELOG_DIR }}
+        PR_NUMBER: ${{ env.PR_NUMBER }}
+        GITHUB_REPOSITORY: ${{ env.GITHUB_REPOSITORY }}
       run: |
+        echo "=== GENERATING CHANGELOG ==="
+        echo "Environment variables for changelog script:"
+        echo "CHANGELOG_DIR: $CHANGELOG_DIR"
+        echo "PR_NUMBER: $PR_NUMBER"
+        echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+        echo ""
+
+        echo "Current directory: $(pwd)"
+        echo "Running changelog.js script..."
+        echo "================================"
+
+        # Run the script with full output
+        node Tools/changelogs/changelog.js
+
+        echo "================================"
+        echo "Changelog script completed"
+
+        # Verify the changelog was updated
+        echo ""
+        echo "Checking if changelog was updated..."
+
+        if [ -f "$CHANGELOG_DIR" ]; then
+          echo "Changelog file exists. Last 5 entries:"
+          tail -20 "$CHANGELOG_DIR" || echo "Could not read tail of file"
+
+          # Count entries
+          ENTRY_COUNT=$(grep -c "^  - author:" "$CHANGELOG_DIR" || echo "0")
+          echo "Total entries in changelog: $ENTRY_COUNT"
+        else
+          echo "ERROR: Changelog file not found at $CHANGELOG_DIR"
+          exit 1
+        fi
+
+        echo "=== CHANGELOG GENERATION COMPLETE ==="
+
+    # ========== STEP 8: COMMIT CHANGES ==========
+    - name: Commit and Push Changelog
+      env:
+        # Use GitHub token for push
+        GH_PAT: ${{ secrets.GH_PAT }}
+      run: |
+        echo "=== COMMITTING CHANGELOG ==="
+
+        # Configure git to use the token
+        echo "Configuring git remote with token..."
+        git remote set-url origin "https://x-access-token:${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git"
+
+        # Pull latest changes to avoid conflicts
+        echo "Pulling latest changes from master..."
         git pull origin master
-        git add *.yml
-        git commit -m "${{ vars.CHANGELOG_MESSAGE }} (#${{ env.PR_NUMBER }})"
-        git push
-      shell: bash
-      continue-on-error: true
+
+        # Check what changes we have
+        echo "Git status before commit:"
+        git status
+
+        # Check specifically for changelog changes
+        echo "Checking for changes in changelog file:"
+        if git diff --name-only HEAD | grep -q "Changelog"; then
+          echo "Changelog file has changes"
+          git diff HEAD -- "${{ env.CHANGELOG_DIR }}" | head -50
+        else
+          echo "No changes detected in changelog file"
+        fi
+
+        # Add and commit
+        echo "Adding changelog file..."
+        git add "${{ env.CHANGELOG_DIR }}"
+
+        echo "Committing changes..."
+        if ! git diff --cached --quiet; then
+          git commit -m "📝 Update changelog (#${{ env.PR_NUMBER }})"
+          echo "Pushing to master..."
+          git push origin master
+        else
+          echo "No changes to commit."
+        fi
+
+        echo "=== CHANGELOG COMMITTED SUCCESSFULLY ==="
+
+    # ========== STEP 9: FINAL VERIFICATION ==========
+    - name: Final Verification
+      run: |
+        echo "=== FINAL VERIFICATION ==="
+        echo "Workflow completed for PR #${{ env.PR_NUMBER }}"
+        echo "Changelog updated at: ${{ env.CHANGELOG_DIR }}"
+        echo "Timestamp: $(date)"
+        echo "=== WORKFLOW COMPLETE ==="

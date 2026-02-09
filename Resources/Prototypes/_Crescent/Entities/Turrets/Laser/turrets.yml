@@ -30,7 +30,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 50
+      projectileSpeed: 120
       fireRate: 1
       selectedMode: FullAuto
       availableModes:
@@ -89,7 +89,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 85
+      projectileSpeed: 120
       fireRate: 2.2
       selectedMode: FullAuto
       availableModes:
@@ -150,7 +150,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 180
       fireRate: 25
       selectedMode: FullAuto
       availableModes:
@@ -163,7 +163,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 0.2
+      rechargeCooldown: 0.5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -209,7 +209,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 180
       fireRate: 25
       selectedMode: FullAuto
       availableModes:
@@ -266,11 +266,11 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 70
+      projectileSpeed: 140
       fireRate: 3
-      selectedMode: FullAuto
+      selectedMode: Burst
       availableModes:
-        - FullAuto
+        - Burst
       angleDecay: 0
       minAngle: 0
       maxAngle: 0
@@ -325,14 +325,14 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 90
+      projectileSpeed: 70
       fireRate: 3.5
-      selectedMode: FullAuto
+      selectedMode: Burst
       availableModes:
-        - FullAuto
-      angleDecay: 25
-      minAngle: 2
-      maxAngle: 8
+        - Burst
+      angleDecay: 0
+      minAngle: 0
+      maxAngle: 0
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/lasergatling.ogg
         params:
@@ -386,7 +386,7 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 50
+      projectileSpeed: 200
       fireRate: 1
       selectedMode: FullAuto
       availableModes:
@@ -442,8 +442,8 @@
           ents: []
     - type: Gun
       fireOnDropChance: 0
-      projectileSpeed: 75
-      fireRate: 2.6
+      projectileSpeed: 200
+      fireRate: 1
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -452,7 +452,7 @@
         params:
           variation: 0.12
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 2
+      rechargeCooldown: 5
       rechargeSound:
         path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
         params:
@@ -460,8 +460,8 @@
           variation: 0.08
     - type: BasicEntityAmmoProvider
       proto: BulletDamnation
-      capacity: 25
-      count: 10
+      capacity: 5
+      count: 5
     - type: ApcPowerReceiver
       powerLoad: 6000
     - type: HardpointAnchorableOnly

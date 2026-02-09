@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Velator
-  name: КВСТ Велатор
+  name: ТК Велатор
   description: Легкий корвет радиоэлектронной борьбы Синдиката с бортовым арсеналом саботажника.
   price: 60000
   category: Medium
@@ -24,7 +24,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: corvette
         - type: StationNameSetup
-          mapNameTemplate: 'ФА Велатор {1}'
+          mapNameTemplate: 'ТК Велатор {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

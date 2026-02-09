@@ -3,7 +3,7 @@
 
 - type: vessel
   id: Spriggan
-  name: КВСТ Сприган
+  name: ТК Сприган
   description: |
     Результат экспериментов инженера ПК с тюнингом, "Сприган" — это мобильный контрабандистско-спасательный корабль, дешевый и легко модифицируемый во что угодно.
     ВООРУЖЕНИЕ: 2x Добывающие орудия "Экскаватор"
@@ -15,7 +15,7 @@
 
 - type: gameMap
   id: Spriggan
-  mapName: 'КВСТ Сприган'
+  mapName: 'ТК Сприган'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/spriggan.yml
   minPlayers: 0
   stations:
@@ -27,7 +27,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: corvette
         - type: StationNameSetup
-          mapNameTemplate: 'КВСТ Сприган {1}'
+          mapNameTemplate: 'ТК Сприган {1}'
           nameGenerator:
            !type:NanotrasenNameGenerator
             prefixCreator: '14'

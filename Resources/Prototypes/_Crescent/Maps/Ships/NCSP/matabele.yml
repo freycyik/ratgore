@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Matabele
-  name: КВСТ Матабел
+  name: БИ Матабел
   description: Скрытная капсула скорой помощи.
   price: 45000
   category: Small
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Matabele
-  mapName: 'КВСТ Матабел'
+  mapName: 'БИ Матабел'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/matabele.yml
   minPlayers: 0
   stations:

@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Sinn
-  name: КВСТ Злоба
+  name: МГ Злоба
   description: Усиленно вооруженный эсминец Синдиката.
   price: 85000 #84000 appraisegrid
   category: Medium

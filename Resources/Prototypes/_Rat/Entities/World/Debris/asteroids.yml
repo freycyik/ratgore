@@ -1,0 +1,412 @@
+- type: entity
+  id: RatBaseAsteroidDebrisNF
+  parent: BaseDebrisNF
+  name: Asteroid Debris
+  abstract: true
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorAsteroidSand
+      blobDrawProb: 0.5
+      radius: 6
+      floorPlacements: 16
+
+- type: entity
+  id: RatBaseAsteroidPoor
+  parent: RatBaseAsteroidDebrisNF
+  name: Poor Asteroid Debris
+  abstract: true
+  components:
+    - type: IFF
+      flags: HideLabel
+      color: "#FFF0AA"
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorAsteroidSand:
+          - id: WallRock
+            prob: 0.60
+            orGroup: rock
+          - id: WallRockCoal
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockTin
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockQuartz
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockCopper
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockGold
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockSilver
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockSalt
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockArtifactFragment
+            prob: 0.02
+            orGroup: rock
+          - id: WallRockPlasma
+            prob: 0.015
+            orGroup: rock
+          - id: WallRockUranium
+            prob: 0.015
+            orGroup: rock
+          - id: WallRockTungsten
+            prob: 0.015
+            orGroup: rock
+          - id: RockElementalSpawner
+            prob: 0.005
+            orGroup: rock
+
+- type: entity
+  id: RatBaseAsteroidRich
+  parent: RatBaseAsteroidDebrisNF
+  name: Rich Asteroid Debris
+  abstract: true
+  components:
+    - type: IFF
+      flags: HideLabel
+      color: "#FFD000"
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorAsteroidSand:
+          - id: WallRock
+            prob: 0.35
+            orGroup: rock
+          - id: WallRockCoal
+            prob: 0.075
+            orGroup: rock
+          - id: WallRockTin
+            prob: 0.075
+            orGroup: rock
+          - id: WallRockQuartz
+            prob: 0.075
+            orGroup: rock
+          - id: WallRockCopper
+            prob: 0.075
+            orGroup: rock
+          - id: WallRockGold
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockSilver
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockSalt
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockArtifactFragment
+            prob: 0.03
+            orGroup: rock
+          - id: WallRockPlasma
+            prob: 0.03
+            orGroup: rock
+          - id: WallRockUranium
+            prob: 0.03
+            orGroup: rock
+          - id: WallRockTungsten
+            prob: 0.03
+            orGroup: rock
+          - id: RockElementalSpawner
+            prob: 0.01
+            orGroup: rock
+          - id: RandomArtifactSpawner20
+            prob: 0.02
+            orGroup: rock
+
+- type: entity
+  id: RatBaseIceAsteroidPoor
+  parent: RatBaseAsteroidDebrisNF
+  name: Poor Ice Asteroid Debris
+  abstract: true
+  components:
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorIce
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorIce:
+          - id: WallRockSnow
+            prob: 0.75
+            orGroup: rock
+          - id: WallRockSnowCoal
+            prob: 0.12
+            orGroup: rock
+          - id: WallRockSnowTin
+            prob: 0.08
+            orGroup: rock
+          - id: WallRockSnowCopper
+            prob: 0.04
+            orGroup: rock
+          - id: SnowElementalSpawner
+            prob: 0.005
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#BACAFF"
+
+- type: entity
+  id: RatBaseIceAsteroidRich
+  parent: RatBaseAsteroidDebrisNF
+  name: Rich Ice Asteroid Debris
+  abstract: true
+  components:
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorIce
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorIce:
+          - id: WallRockSnow
+            prob: 0.5
+            orGroup: rock
+          - id: WallRockSnowGold
+            prob: 0.08
+            orGroup: rock
+          - id: WallRockSnowSilver
+            prob: 0.08
+            orGroup: rock
+          - id: WallRockSnowPlasma
+            prob: 0.06
+            orGroup: rock
+          - id: WallRockSnowUranium
+            prob: 0.06
+            orGroup: rock
+          - id: WallRockSnowTungsten
+            prob: 0.04
+            orGroup: rock
+          - id: WallRockSnowArtifactFragment
+            prob: 0.03
+            orGroup: rock
+          - id: RandomArtifactSpawner20
+            prob: 0.005
+            orGroup: rock
+          - id: SnowElementalSpawner
+            prob: 0.01
+            orGroup: rock
+          - id: WallRockSnowCoal
+            prob: 0.08
+            orGroup: rock
+          - id: WallRockSnowTin
+            prob: 0.08
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#BACAFF"
+
+- type: entity
+  id: RatBaseBasaltAsteroidPoor
+  parent: RatBaseAsteroidDebrisNF
+  name: Poor Basalt Asteroid Debris
+  abstract: true
+  components:
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorBasalt
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorBasalt:
+          - id: WallRockBasalt
+            prob: 0.7
+            orGroup: rock
+          - id: WallRockBasaltCoal
+            prob: 0.15
+            orGroup: rock
+          - id: WallRockBasaltTin
+            prob: 0.1
+            orGroup: rock
+          - id: WallRockBasaltCopper
+            prob: 0.04
+            orGroup: rock
+          - id: BasaltElementalSpawner
+            prob: 0.005
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#FF7E75"
+
+- type: entity
+  id: RatBaseBasaltAsteroidRich
+  parent: RatBaseAsteroidDebrisNF
+  name: Rich Basalt Asteroid Debris
+  abstract: true
+  components:
+    - type: BlobFloorPlanBuilder
+      floorTileset:
+      - FloorBasalt
+    - type: SimpleFloorPlanPopulator
+      entries:
+        FloorBasalt:
+          - id: WallRockBasalt
+            prob: 0.5
+            orGroup: rock
+          - id: WallRockBasaltPlasma
+            prob: 0.08
+            orGroup: rock
+          - id: WallRockBasaltUranium
+            prob: 0.08
+            orGroup: rock
+          - id: WallRockBasaltSilver
+            prob: 0.07
+            orGroup: rock
+          - id: WallRockBasaltGold
+            prob: 0.06
+            orGroup: rock
+          - id: WallRockBasaltTungsten
+            prob: 0.04
+            orGroup: rock
+          - id: WallRockBasaltArtifactFragment
+            prob: 0.03
+            orGroup: rock
+          - id: RandomArtifactSpawner20
+            prob: 0.01
+            orGroup: rock
+          - id: BasaltElementalSpawner
+            prob: 0.01
+            orGroup: rock
+          - id: WallBasaltCobblebrick
+            prob: 0.05
+            orGroup: rock
+          - id: WallRockBasaltCoal
+            prob: 0.05
+            orGroup: rock
+    - type: IFF
+      flags: HideLabel
+      color: "#FF7E75"
+
+- type: entity
+  id: RatAsteroidPoorLarge
+  parent: RatBaseAsteroidPoor
+  name: Poor Asteroid Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 150
+      radius: 40
+
+- type: entity
+  id: RatAsteroidRichLarge
+  parent: RatBaseAsteroidRich
+  name: Rich Asteroid Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 150
+      radius: 40
+
+- type: entity
+  id: RatAsteroidPoorHuge
+  parent: RatBaseAsteroidPoor
+  name: Poor Asteroid Huge
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 300
+      radius: 70
+
+- type: entity
+  id: RatAsteroidRichHuge
+  parent: RatBaseAsteroidRich
+  name: Rich Asteroid Huge
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 300
+      radius: 70
+
+- type: entity
+  id: RatIceAsteroidPoorLarge
+  parent: RatBaseIceAsteroidPoor
+  name: Poor Ice Asteroid Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 90
+      radius: 25
+
+- type: entity
+  id: RatIceAsteroidRichLarge
+  parent: RatBaseIceAsteroidRich
+  name: Rich Ice Asteroid Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 90
+      radius: 25
+
+- type: entity
+  id: RatIceAsteroidPoorHuge
+  parent: RatBaseIceAsteroidPoor
+  name: Poor Ice Asteroid Huge
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 200
+      radius: 50
+
+- type: entity
+  id: RatIceAsteroidRichHuge
+  parent: RatBaseIceAsteroidRich
+  name: Rich Ice Asteroid Huge
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 200
+      radius: 50
+
+- type: entity
+  id: RatBasaltAsteroidPoorLarge
+  parent: RatBaseBasaltAsteroidPoor
+  name: Poor Basalt Asteroid Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 90
+      radius: 25
+
+- type: entity
+  id: RatBasaltAsteroidRichLarge
+  parent: RatBaseBasaltAsteroidRich
+  name: Rich Basalt Asteroid Large
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 90
+      radius: 25
+
+- type: entity
+  id: RatBasaltAsteroidPoorHuge
+  parent: RatBaseBasaltAsteroidPoor
+  name: Poor Basalt Asteroid Huge
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 200
+      radius: 50
+
+- type: entity
+  id: RatBasaltAsteroidRichHuge
+  parent: RatBaseBasaltAsteroidRich
+  name: Rich Basalt Asteroid Huge
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: MapGrid
+    - type: BlobFloorPlanBuilder
+      floorPlacements: 200
+      radius: 50

@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Wolf
-  name: КВСТ Волк
+  name: МГ Волк
   description: Переделанный имперский крейсер.
   price: 110000 #107000 appraisegrid
   category: Medium
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Wolf
-  mapName: 'КВСТ Волк'
+  mapName: 'МГ Волк'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/wolf.yml
   minPlayers: 0
   stations:

@@ -59,14 +59,14 @@ public class SharedPassportSystem : EntitySystem
         args.PushMarkup(Loc.GetString("passport-gender", ("gender", component.OwnerProfile.Gender.ToString())), 48);
         args.PushMarkup(Loc.GetString("passport-height", ("height", MathF.Round(component.OwnerProfile.Height * species.AverageHeight))), 47);
         args.PushMarkup(Loc.GetString("passport-year-of-birth", ("year", CurrentYear - component.OwnerProfile.Age)), 46);
-        // Ratgore end
-        args.PushMarkup( // idk how translate this.. ПИД? Айди? just stay PID
-            $"PID: {GenerateIdentityString(component.OwnerProfile.Name
+        args.PushMarkup(
+            Loc.GetString("passport-pid", ("pid", GenerateIdentityString(component.OwnerProfile.Name
             + component.OwnerProfile.Height
             + component.OwnerProfile.Age
             + component.OwnerProfile.Height
-            + component.OwnerProfile.FlavorText)}",
+            + component.OwnerProfile.FlavorText))),
             45);
+        // Ratgore end
     }
 
     private void OnPlayerLoadoutApplied(PlayerLoadoutAppliedEvent ev) =>

@@ -1,7 +1,7 @@
 passport-registered-to = Registered to: { $name }
 passport-species = Species: { $species }
 passport-gender = Sex: { $gender }
-passport-height = Height: { $height } см
+passport-height = Height: { $height } cm
 passport-year-of-birth = Year of Birth: { $year }
 passport-pid = PID: { $pid }
 

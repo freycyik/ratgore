@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Harpy
-  name: КВСТ Гарпия
+  name: БИ Гарпия
   description: Ракетный корвет среднего размера со стационарной клиникой на борту.
   price: 75000
   category: Medium
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Harpy
-  mapName: 'КВСТ Гарпия'
+  mapName: 'БИ Гарпия'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/harpy.yml
   minPlayers: 0
   stations:

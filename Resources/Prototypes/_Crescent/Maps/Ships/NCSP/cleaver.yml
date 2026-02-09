@@ -3,8 +3,8 @@
 #
 - type: vessel
   id: Cleaver
-  name: КВСТ Клевер
-  description: Тяжелый истребитель Синдиката.
+  name: МГ Клевер
+  description: Тяжелый истребитель Синдиката c EMP пушкой.
   price: 50000 #50000 appraisegrid
   category: Medium
   group: None
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Cleaver
-  mapName: 'КВСТ Клевер'
+  mapName: 'МГ Клевер'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/cleaver.yml
   minPlayers: 0
   stations:

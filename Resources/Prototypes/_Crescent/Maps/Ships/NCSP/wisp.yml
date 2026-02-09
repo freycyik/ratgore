@@ -1,6 +1,6 @@
 - type: vessel
   id: Wisp
-  name: КЧ Мираж
+  name: ТК Мираж
   description: Переоборудованный гражданский корпус, превращенный в проворный контрабандистский шаттл.
   price: 35000
   category: Small
@@ -9,7 +9,7 @@
 
 - type: gameMap
   id: Wisp
-  mapName: 'КЧ Мираж'
+  mapName: 'ТК Мираж'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/wisp.yml
   minPlayers: 0
   stations:
@@ -21,7 +21,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: corvette
         - type: StationNameSetup
-          mapNameTemplate: 'ФА Мираж {1}'
+          mapNameTemplate: 'ТК Мираж {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Meatwagon
-  name: КВСТ Мяргон
+  name: БИ Мяргон
   description: Вооруженный легкий спасательный шаттл Синдиката.
   price: 40000
   category: Medium
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Meatwagon
-  mapName: 'КВСТ Мяргон'
+  mapName: 'БИ Мяргон'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/meatwagon.yml
   minPlayers: 0
   stations:

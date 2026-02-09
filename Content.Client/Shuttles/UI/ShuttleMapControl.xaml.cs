@@ -71,7 +71,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     private readonly List<ShuttleExclusionObject> _viewportExclusions = new();
 
     //Changing from 256 512 512 to 256 2048 2048, this shows in testing to be about 4000 units ish. presume 1024>2048 units
-    public ShuttleMapControl() : base(256f, 2048f, 2048f)
+    public ShuttleMapControl() : base(384f, 3072f, 3072f)
     {
         RobustXamlLoader.Load(this);
         _shuttles = EntManager.System<ShuttleSystem>();
@@ -199,6 +199,35 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         }
     }
 
+    // Rat-start
+    private void DrawRatZones(DrawingHandleScreen handle)
+    {
+        if (ViewingMap == MapId.Nullspace)
+            return;
+
+        var matty = Matrix3Helpers.CreateInverseTransform(Offset, Angle.Zero);
+        
+        // Центр мира (0,0) на текущей карте
+        var worldCenter = new MapCoordinates(Vector2.Zero, ViewingMap);
+        
+        // Преобразуем центр мира в экранные координаты
+        var centerRelativePos = Vector2.Transform(worldCenter.Position, matty);
+        centerRelativePos = centerRelativePos with { Y = -centerRelativePos.Y };
+        var centerUiPos = ScalePosition(centerRelativePos);
+
+        // Рисуем красную зону (650 units)
+        var redZoneRadius = 650f * MinimapScale;
+        handle.DrawCircle(centerUiPos, redZoneRadius, new Color(255, 0, 0, 50), false);
+
+        // Рисуем зелёные зоны (3950 и 4350 units)
+        var greenZoneRadius1 = 3950f * MinimapScale;
+        var greenZoneRadius2 = 4350f * MinimapScale;
+        
+        handle.DrawCircle(centerUiPos, greenZoneRadius1, new Color(0, 255, 0, 50), false);
+        handle.DrawCircle(centerUiPos, greenZoneRadius2, new Color(0, 255, 0, 50), false);
+    }
+    // Rat-end
+
     /// <summary>
     /// Gets the map objects that intersect the viewport.
     /// </summary>
@@ -249,6 +278,8 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         }
 
         DrawParallax(handle);
+
+        DrawRatZones(handle);
 
         var viewedMapUid = _mapManager.GetMapEntityId(ViewingMap);
         var matty = Matrix3Helpers.CreateInverseTransform(Offset, Angle.Zero);

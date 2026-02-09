@@ -3,7 +3,7 @@
 
 - type: vessel
   id: Roachling
-  name: ШТ Таракан
+  name: Роучлинг
   description: |
     "Тараканчик" создан из списанного добывающего дрона задешево, переоборудованного для использования органическим пилотом, с минимальной заботой о пилотирующем его человеке.
     ВООРУЖЕНИЕ: 2x Добывающие орудия "Экскаватор"
@@ -15,7 +15,7 @@
 
 - type: gameMap
   id: Roachling
-  mapName: 'Таракан'
+  mapName: 'Роучлинг'
   mapPath: /Maps/_Crescent/Shuttles/Civilian/roachling.yml
   minPlayers: 0
   stations:
@@ -27,7 +27,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: fighter
         - type: StationNameSetup
-          mapNameTemplate: 'Таракан {1}'
+          mapNameTemplate: 'Роучлинг {1}'
           nameGenerator:
            !type:NanotrasenNameGenerator
             prefixCreator: '14'

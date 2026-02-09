@@ -19,10 +19,17 @@ jobs:
       - name: Install OS dependencies
         run: sudo apt-get install -y python3-paramiko python3-lxml
 
-      - uses: actions/checkout@v4
+      - name: Checkout main repository
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
+
+      - name: Sync files from secret repository
+        run: python3 Tools/sync_secret_repo.py
+        env:
+          SECRET_REPO_TOKEN: ${{ secrets.SECRET_REPO_TOKEN }}
+          SECRET_REPO_URL: ${{ vars.SECRET_REPO_URL }}
 
       - name: Fetch all tags (RobustToolbox)
         run: |

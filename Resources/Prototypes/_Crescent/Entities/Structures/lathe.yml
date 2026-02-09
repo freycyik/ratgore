@@ -219,7 +219,7 @@
 
 - type: entity
   id: PristineMicroforge
-  parent: BaseLathe
+  parent: [BaseLathe, BaseMaterialSiloUtilizer]
   name: pristine microforge
   description: Used to print equipment discovered through techdisks, or researched.
   components:
@@ -611,6 +611,7 @@
       - WeaponMechIndustrialKineticAcceleratorImperial
       - MechEquipmentGrabberImperial
       - WeaponMechMeleeDrillImperial
+      - WeaponMechMaul
       - WeaponRifleMiller
       - WeaponRevolverArgenti
       - WeaponPistolComplianceImperial
@@ -712,6 +713,8 @@
       - ShinoharaOptics
       - WeaponMechCombatAutoshotgun
       - WeaponMechCombatLightRifle
+      - WeaponMechCombatHeavyRifle
+      - WeaponMechCombatAutocannon
       - WeaponMechSword
       - WeaponMechGustaf
       - ClothingUniformJumpsuitShinoharaHighsec
@@ -746,6 +749,10 @@
       - BallisticCycler1
       - TubeLoader1
       - LaserLocus1
+      - BallisticCyclerNCWL
+      - TubeLoaderNCWL
+      - BallisticCyclerDSM
+      - TubeLoaderDSM
       - MagwellFlatpack
       - IdnaFlatpack
       - IdnaTorpedo
@@ -756,6 +763,14 @@
       - WeaponSubMachineGunSabre
       - WeaponLightMachineGunL6
       - WeaponLauncherMilkor
+      - GrenadeSHIHG17Smart
+      - HG13M2MiniHandgrenade
+      - SHIHG19SmartHandgrenadeEMP
+      - SHIHG7FlashbangHandgrenade
+      - SHIHG3TearGasHandgrenade
+      - WeaponPistolSmartpistolSHI
+      - WeaponShotgunEnforcer
+      - CartridgeHammerheadRocket
       - BoriaticComposterFlatpack
       - CyberneticsMantisBladeRight
       - CyberneticsMantisBladeLeft
@@ -772,6 +787,7 @@
       - SHIShiverBlade
       - ClothingOuterHardsuitSHIJuggernaut
       - ClothingOuterHardsuitSHISpeedsuit
+      - FleaLPC
       - FujinLPC
       - MetempsychoticMachineCircuitboard
       - HardlinerFlatpack
@@ -1409,6 +1425,16 @@
       - ClothingNeckIFFBlue
       - ClothingNeckIFFOrange
       - ClothingNeckIFFPurple
+      - WeaponCaseRifle
+      - GrenadeCase
+      - WeaponCasePistol
+      - WeaponCaseSmg
+      - WeaponCaseSniper
+      - WeaponCaseRpg
+      - WeaponCaseLmg
+      - WeaponCaseShotgun
+      - WeaponCaseGl
+      - WeaponCaseAmmo
 
   - type: Machine
     board: MicroforgeCircuitboard
@@ -1448,7 +1474,7 @@
 #ship parts
 
 - type: entity
-  parent: BaseLathe
+  parent: [BaseLathe, BaseMaterialSiloUtilizer]
   id: ShipyardManufactorum
   name: SHI shipyard manufactorum
   description: An automated assembler, constructing vessel components out of minerals.
@@ -1668,6 +1694,7 @@
     runningState: fab-active
     staticRecipes:
     - GoodSilkCrate
+    - FillamentSilkCrate
     - AlcoholCrate
     - BadscrapCrate
     - Ammocrate

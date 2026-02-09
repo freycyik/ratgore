@@ -126,18 +126,18 @@ namespace Content.Server.Preferences.Managers
             // hullrot edit
             if (profile is HumanoidCharacterProfile humanProfile)
             {
-                if (!curPrefs.Characters.ContainsKey(slot))
+                var sanitized = humanProfile;
+                if (curPrefs.Characters.TryGetValue(slot, out var existingProfile)
+                    && existingProfile is HumanoidCharacterProfile humanoidEditingTarget)
                 {
-                    profile = humanProfile.WithBank(HumanoidCharacterProfile.DefaultBalance);
-                }
-                else if (curPrefs.Characters[slot] is HumanoidCharacterProfile humanoidEditingTarget)
-                {
+                    sanitized = sanitized.WithBank(humanoidEditingTarget.BankBalance);
+
                     // you cheat like a king! gg! - SPCR
                     if (humanoidEditingTarget.Faction != "" && humanProfile.Faction != humanoidEditingTarget.Faction)
                     {
                         _sawmill.Info(
                             $"{session.Name} has tried to modify a locked character's faction. They are using a modified client!");
-                        profile = humanProfile.WithFaction(humanoidEditingTarget.Faction);
+                        sanitized = sanitized.WithFaction(humanoidEditingTarget.Faction);
                     }
 
                     // ha ha ha ha
@@ -145,12 +145,18 @@ namespace Content.Server.Preferences.Managers
                     {
                         if(humanProfile.BankBalance > humanoidEditingTarget.BankBalance)
                             _sawmill.Info($"{session.Name} has tried to give their character money. They are using a modified client!");
-                        profile = humanProfile.WithBank(humanoidEditingTarget.BankBalance);
+                        sanitized = sanitized.WithBank(humanoidEditingTarget.BankBalance);
                     }
 
                     // prevent client from changing flags on a slot. fuck you
-                    profile = humanProfile.WithCharacterFlags(humanoidEditingTarget.CharacterFlags);
+                    sanitized = sanitized.WithCharacterFlags(humanoidEditingTarget.CharacterFlags);
                 }
+                else
+                {
+                    sanitized = sanitized.WithBank(HumanoidCharacterProfile.DefaultBalance);
+                }
+
+                profile = sanitized;
             }
 
             // hullrot edit end

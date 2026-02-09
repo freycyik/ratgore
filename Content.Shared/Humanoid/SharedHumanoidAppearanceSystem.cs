@@ -23,6 +23,8 @@ using Robust.Shared.Serialization.Markdown;
 using Robust.Shared.Utility;
 using YamlDotNet.RepresentationModel;
 using Content.Shared._EE.GenderChange;
+using Robust.Shared.Serialization.Markdown.Mapping;
+
 
 namespace Content.Shared.Humanoid;
 
@@ -73,6 +75,12 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         };
 
         var dataNode = _serManager.WriteValue(export, alwaysWrite: true, notNullableOverride: true);
+        if (dataNode is MappingDataNode exportMap
+            && exportMap.TryGet("profile", out var profileNode)
+            && profileNode is MappingDataNode profileMap)
+        {
+            profileMap.Remove("bankBalance");
+        }
         return dataNode;
     }
 
@@ -90,6 +98,8 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         var profile = export.Profile;
         var collection = IoCManager.Instance;
         profile.EnsureValid(session, collection!);
+
+        profile = profile.WithBank(HumanoidCharacterProfile.DefaultBalance);
         return profile;
     }
 

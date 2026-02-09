@@ -3,7 +3,7 @@
 #
 - type: vessel
   id: Cerberus
-  name: КВСТ Цербер
+  name: МГ Цербер
   description: Защищенный эсминец Синдиката.
   price: 85000 #77000 appraisegrid
   category: Medium
@@ -12,7 +12,7 @@
 
 - type: gameMap
   id: Cerberus
-  mapName: 'КВСТ Цербер'
+  mapName: 'МГ Цербер'
   mapPath: /Maps/_Crescent/Shuttles/NCSP/cerberus.yml
   minPlayers: 0
   stations:
