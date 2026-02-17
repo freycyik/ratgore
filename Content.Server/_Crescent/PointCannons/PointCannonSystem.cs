@@ -230,15 +230,16 @@ public class PointCannonSystem : EntitySystem
         if (!TryComp<PointCannonLinkToolComponent>(args.Used, out var linkTool))
             return;
 
-        EntityUid? gridUid = Transform(uid).GridUid;
+        var gridUid = Transform(uid).GridUid;
         if (gridUid == null)
             return;
 
-        var query = EntityManager.AllEntityQueryEnumerator<TransformComponent, TargetingConsoleComponent>();
-        while (query.MoveNext(out var consoleUid, out var form, out var console))
+        HashSet<Entity<TargetingConsoleComponent>> consoles = new();
+        _lookup.GetGridEntities(gridUid.Value, consoles); // только на текущем гриде
+
+        foreach (var console in consoles)
         {
-            if (form.GridUid == gridUid)
-                LinkCannon(uid, consoleUid, console, linkTool.GroupName);
+            LinkCannon(uid, console.Owner, console.Comp, linkTool.GroupName);
         }
 
         _popSys.PopupEntity($"Added to {linkTool.GroupName}", args.User);
