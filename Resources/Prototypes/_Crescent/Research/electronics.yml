@@ -53,7 +53,8 @@
   - BasicElectronics1Electronics
   - WeakLaserLocus1Electronics
   - HardsuitElectronics1Electronics
-
+  - DroneElectronicsCircuit
+  
 - type: technology
   id: BasicXenoArcheologyElectronics
   name: research-technology-basic-xenoarcheology
