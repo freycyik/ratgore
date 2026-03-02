@@ -63,6 +63,7 @@
     - Praxis
     - Laelaps
     #- Dragoon
+    - Torturer
 
 - type: entity
   id: NemesisMothershipComputer
