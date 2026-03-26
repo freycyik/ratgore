@@ -33,3 +33,31 @@
     useDelay: 1
     icon: { sprite: Objects/Fun/bikehorn.rsi, state: icon }
     event: !type:SirenActionEvent
+
+- type: entity
+  id: ActionToggleSandevistan
+  name: action-sandevistan-name
+  description: action-sandevistan-desc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    useDelay: 3
+    icon: { sprite: _Goobstation/Objects/Misc/sandevistan.rsi, state: icon }
+    itemIconStyle: NoItem
+    event: !type:ToggleSandevistanEvent
+
+- type: entity
+  id: ActionActivateBerserkerImplant
+  name: action-berserker-name
+  description: action-berserker-desc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    event: !type:ActivateBerserkerImplantActionEvent
+    checkCanInteract: false
+    useDelay: 40
+    icon: { sprite: _Goobstation/Objects/Misc/berserker_heart.rsi, state: icon }
+    itemIconStyle: NoItem
+    sound: !type:SoundPathSpecifier
+      path: /Audio/_Goobstation/Misc/berserker-implant-activate.ogg

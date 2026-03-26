@@ -113,29 +113,30 @@
     dynamicInventory:  
     ### Производство
       # БМС
-      TradeGoodWine: 16000
+      TradeGoodWine: 24000
       TradeGoodImperialArmor: 16000
-      TradeGoodCybernetics: 16000
+      TradeGoodCybernetics: 24000
       TradeGoodImperialScrap: 16000
-      TradeGoodImperialQualitySalvage: 16000
+      TradeGoodImperialQualitySalvage: 24000
 
       # КВСТ
       TradeGoodGunparts: 8000
       TradeGoodAntibiotics: 8000
-      TradeGoodPlasma: 8000
-      TradeGoodDrugs: 8000
+      TradeGoodPlasma: 16000
+      TradeGoodDrugs: 16000
       TradeGoodScrapersLootbox: 8000
-      TradeGoodValuableScrapTFSC: 8000
+      TradeGoodValuableScrapTFSC: 16000
+      TradeGoodOrgans: 16000
 
       # Шиногара + Глисс Санто
-      TradeGoodSilks: 6000
-      TradeGoodAlcohol: 6000
-      TradeGoodScrap: 6000
-      TradeGoodAmmo: 6000
+      TradeGoodSilks: 16000
+      TradeGoodAlcohol: 8000
+      TradeGoodScrap: 8000
+      TradeGoodAmmo: 8000
 
       # Шиногара
-      TradeGoodAlloys: 6000
-      TradeGoodGoodScrap: 6000
+      TradeGoodAlloys: 16000
+      TradeGoodGoodScrap: 16000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -158,28 +159,29 @@
     ### Производство
       # ЛРНП
       TradeGoodUnionWeapon: 16000
-      TradeGoodUnionVodka: 16000
-      TradeGoodUnionBallistic: 16000
-      TradeGoodUnionQualitySalvage: 16000
+      TradeGoodUnionVodka: 24000
+      TradeGoodUnionBallistic: 24000
+      TradeGoodUnionQualitySalvage: 24000
       TradeGoodCommunardScrap: 16000
 
       # КВСТ
       TradeGoodGunparts: 8000
       TradeGoodAntibiotics: 8000
-      TradeGoodPlasma: 8000
-      TradeGoodDrugs: 8000
+      TradeGoodPlasma: 16000
+      TradeGoodDrugs: 16000
       TradeGoodScrapersLootbox: 8000
-      TradeGoodValuableScrapTFSC: 8000
+      TradeGoodValuableScrapTFSC: 16000
+      TradeGoodOrgans: 16000
 
       # Шиногара + Глисс Санто
-      TradeGoodSilks: 6000
-      TradeGoodAlcohol: 6000
-      TradeGoodScrap: 6000
-      TradeGoodAmmo: 6000
+      TradeGoodSilks: 16000
+      TradeGoodAlcohol: 8000
+      TradeGoodScrap: 8000
+      TradeGoodAmmo: 8000
 
       # Шиногара
-      TradeGoodAlloys: 6000
-      TradeGoodGoodScrap: 6000
+      TradeGoodAlloys: 16000
+      TradeGoodGoodScrap: 16000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -201,28 +203,28 @@
     dynamicInventory:  
     ### Производство
       # БМС
-      TradeGoodWine: 8000
+      TradeGoodWine: 16000
       TradeGoodImperialArmor: 8000
-      TradeGoodCybernetics: 8000
+      TradeGoodCybernetics: 16000
       TradeGoodImperialScrap: 8000
-      TradeGoodImperialQualitySalvage: 8000
+      TradeGoodImperialQualitySalvage: 16000
 
       # ЛРНП
       TradeGoodUnionWeapon: 8000
-      TradeGoodUnionVodka: 8000
-      TradeGoodUnionBallistic: 8000
-      TradeGoodUnionQualitySalvage: 8000
+      TradeGoodUnionVodka: 16000
+      TradeGoodUnionBallistic: 16000
+      TradeGoodUnionQualitySalvage: 16000
       TradeGoodCommunardScrap: 8000
 
       # Шиногара + Глисс Санто
-      TradeGoodSilks: 10000
-      TradeGoodAlcohol: 10000
-      TradeGoodScrap: 10000
-      TradeGoodAmmo: 10000
+      TradeGoodSilks: 16000
+      TradeGoodAlcohol: 8000
+      TradeGoodScrap: 8000
+      TradeGoodAmmo: 8000
 
       # Шиногара
-      TradeGoodAlloys: 10000
-      TradeGoodGoodScrap: 10000
+      TradeGoodAlloys: 16000
+      TradeGoodGoodScrap: 16000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -244,26 +246,26 @@
     dynamicInventory:  
     ### Производство
       # БМС
-      TradeGoodWine: 8000
+      TradeGoodWine: 16000
       TradeGoodImperialArmor: 8000
-      TradeGoodCybernetics: 8000
+      TradeGoodCybernetics: 16000
       TradeGoodImperialScrap: 8000
-      TradeGoodImperialQualitySalvage: 8000
+      TradeGoodImperialQualitySalvage: 16000
 
       # ЛРНП
       TradeGoodUnionWeapon: 8000
-      TradeGoodUnionVodka: 8000
-      TradeGoodUnionBallistic: 8000
-      TradeGoodUnionQualitySalvage: 8000
+      TradeGoodUnionVodka: 16000
+      TradeGoodUnionBallistic: 16000
+      TradeGoodUnionQualitySalvage: 16000
       TradeGoodCommunardScrap: 8000
 
       # КВСТ
-      TradeGoodGunparts: 10000
-      TradeGoodAntibiotics: 10000
-      TradeGoodPlasma: 10000
-      TradeGoodDrugs: 10000
-      TradeGoodScrapersLootbox: 10000
-      TradeGoodValuableScrapTFSC: 10000
+      TradeGoodGunparts: 8000
+      TradeGoodAntibiotics: 8000
+      TradeGoodDrugs: 16000
+      TradeGoodScrapersLootbox: 8000
+      TradeGoodValuableScrapTFSC: 16000
+      TradeGoodOrgans: 16000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:

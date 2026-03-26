@@ -1,0 +1,5 @@
+- type: entity
+  parent: SurgeryStepInsertOrgan
+  id: SurgeryStepInsertSpine
+  name: Install Cybernetic
+  categories: [ HideSpawnMenu ]

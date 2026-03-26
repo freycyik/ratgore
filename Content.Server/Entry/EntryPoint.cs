@@ -1,3 +1,4 @@
+using Content.Server._Lua.ChatFilter; // Lua
 using Content.Server.Acz;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
@@ -123,6 +124,7 @@ namespace Content.Server.Entry
             base.PostInit();
 
             IoCManager.Resolve<IChatSanitizationManager>().Initialize();
+            IoCManager.Resolve<ChatFilterManager>().Initialize(); // Lua
             IoCManager.Resolve<IChatManager>().Initialize();
             var configManager = IoCManager.Resolve<IConfigurationManager>();
             var resourceManager = IoCManager.Resolve<IResourceManager>();

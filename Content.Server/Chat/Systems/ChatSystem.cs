@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using Content.Server._Lua.ChatFilter; // Lua
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
@@ -58,6 +59,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly IChatSanitizationManager _sanitizer = default!;
+    [Dependency] private readonly ChatFilterManager _chatFilter = default!; // Lua
     [Dependency] private readonly IAdminManager _adminManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -207,6 +209,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (!CanSendInGame(message, shell, player))
             return;
 
+        if (_chatFilter.IsProhibitedContent(source, message)) return; // Lua
+
         ignoreActionBlocker = CheckIgnoreSpeechBlocker(source, ignoreActionBlocker);
 
         // this method is a disaster
@@ -303,6 +307,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         // in-game IC messages.
         if (player?.AttachedEntity is not { Valid: true } entity || source != entity)
             return;
+
+        if (_chatFilter.IsProhibitedContent(source, message)) return; // Lua
 
         message = SanitizeInGameOOCMessage(message);
 
@@ -849,6 +855,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         var msg = message;
 
         msg = _wordreplacement.ApplyReplacements(msg, ChatSanitize_Accent);
+        msg = _chatFilter.FilterMessage(msg); // Lua
 
         return msg;
     }

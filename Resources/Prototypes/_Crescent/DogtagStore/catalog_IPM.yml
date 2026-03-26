@@ -31,6 +31,9 @@
     SampleIPM: 20
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
 
 - type: listing
   id: StoreListingIPMMatabele
@@ -42,6 +45,9 @@
     SampleIPM: 10
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
 
 - type: listing
   id: StoreListingIPMHarpy
@@ -53,6 +59,9 @@
     SampleIPM: 5
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
 
 - type: listing
   id: StoreListingIPMMeatwagon
@@ -64,6 +73,9 @@
     SampleIPM: 5
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
 
 - type: listing
   id: StoreListingIPMFridge
@@ -75,6 +87,9 @@
     SampleIPM: 3
   categories:
   - StoreCategoryIPMShips
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
 
 # Cybernetics
 - type: listing
@@ -140,6 +155,28 @@
   productEntity: CyberneticsPainEditor
   cost:
     SampleIPM: 20
+  categories:
+  - StoreCategoryIPMCybernetics
+
+- type: listing
+  id: StoreListingIPMCyberneticsSandevistan
+  name: IPM TT-48 Sandevistan
+  description: Illegal cyberware that allows them to greatly increase their speed for the cost of the endurance.
+  icon: { sprite: /Textures/_Goobstation/Objects/Misc/sandevistan.rsi, state: icon }
+  productEntity: OrganHeartSandevistan
+  cost:
+    SampleIPM: 25
+  categories:
+  - StoreCategoryIPMCybernetics
+
+- type: listing
+  id: StoreListingIPMCyberneticsBerserkerHeart
+  name: IPM TT-91 Berserker heart
+  description: A next-gen combat circulatory core that allows the user to enter a berserk state, greatly increasing their speed and reflexes for a short time at the cost of endurance and some pain resistance. Highly illegal.
+  icon: { sprite: /Textures/_Goobstation/Objects/Misc/berserker_heart.rsi, state: icon }
+  productEntity: OrganHeartBerserker
+  cost:
+    SampleIPM: 25
   categories:
   - StoreCategoryIPMCybernetics
 

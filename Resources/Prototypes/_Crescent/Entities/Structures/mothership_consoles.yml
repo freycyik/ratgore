@@ -265,7 +265,8 @@
   components:
   - type: ShipyardListing
     shuttles:
-    - Mojave
+    - Phantom
+    - Falcon
 
 - type: entity
   id: TrashcanMothershipComputer

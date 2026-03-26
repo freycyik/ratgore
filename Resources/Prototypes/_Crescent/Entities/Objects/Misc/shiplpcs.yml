@@ -2181,3 +2181,54 @@
     price: 2500
   - type: ShipVoucher
     ship: Lungspot
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherMojave
+  name: Nap 'Mojave' pattern LPC fabprint disk
+  description: An LPC fabprint disk loaded with an Imperial Xenovalk-class medical shuttle. Has to be redeemed at a shipyard console.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 200000
+  - type: ShipVoucher
+    ship: Mojave
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherPhantom
+  name: Nap 'Phantom' pattern LPC fabprint disk
+  description: LPC fabprint disk with an American ultra-light strike shuttle. Redeem at shipyard console. Fast, agile, hit-and-run ready.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 20000
+  - type: ShipVoucher
+    ship: Phantom
+
+- type: entity
+  parent: BaseItem
+  id: ShipVoucherFalcon
+  name: Nap 'Falcon' pattern LPC fabprint disk
+  description: LPC fabprint disk with an American ultra-light strike shuttle. Redeem at shipyard console. Fast, agile, hit-and-run ready.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Crescent/Objects/Misc/lpcchip.rsi
+    layers:
+    - state: icon
+  - type: StaticPrice
+    price: 20000
+  - type: ShipVoucher
+    ship: Falcon

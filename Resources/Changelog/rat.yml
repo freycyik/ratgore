@@ -442,5 +442,60 @@ Entries:
     id: 59
     time: '2026-03-23T12:14:47.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/65
+  - author: freycyik
+    changes:
+      - type: Tweak
+        message: Увеличена цена киборгов-саботёров, уменьшено их ХП и количество пуль.
+    id: 60
+    time: '2026-03-24T11:35:42.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/75
+  - author: Gorox
+    changes:
+      - type: Add
+        message: Добавлен звук при полной поломке брони.
+      - type: Add
+        message: Теперь тип материала брони отображается в ее описании.
+    id: 61
+    time: '2026-03-24T11:35:52.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/73
+  - author: Gorox
+    changes:
+      - type: Tweak
+        message: Теперь вендомат интердайна имеет ограниченное количество LPC дисков.
+      - type: Tweak
+        message: Измененая цена печати немаркированной партии в органическом биопринтере. 25 -> 15.
+      - type: Tweak
+        message: Немаркированную партию можно продавать на других станциях.
+    id: 62
+    time: '2026-03-24T12:20:41.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/76
+  - author: freycyik
+    changes:
+      - type: Tweak
+        message: Уменьшены цены в вендомате горлакса
+    id: 63
+    time: '2026-03-24T12:28:59.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/67
+  - author: SupernoobTheN1
+    changes:
+      - type: Tweak
+        message: Теперь вы можете высыпать руду из магнита для руды и ящика для руды.
+    id: 64
+    time: '2026-03-25T11:42:29.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/77
+  - author: ReWAFFlution
+    changes:
+      - type: Add
+        message: Добавлен фильтр сообщений.
+    id: 65
+    time: '2026-03-26T12:27:54.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/79
+  - author: Gorox221
+    changes:
+      - type: Add
+        message: 'Добавлены два новых боевых импланта с активными способностями в вендомат интердайна: ИПМ TT-48 Сандевистан и ИПМ TT-98 Сердце берсерка'
+    id: 66
+    time: '2026-03-26T12:28:59.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/78
 Name: Rat
 Order: -1

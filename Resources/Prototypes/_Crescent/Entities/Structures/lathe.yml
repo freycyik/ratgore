@@ -666,6 +666,8 @@
       - InterdyneOpticsInterdyne
       - CrowbarLeftArmInterdyne
       - CrowbarRightArmInterdyne
+      - InterdyneSandevistanInterdyne
+      - InterdyneBerserkerInterdyne
       - FridgeLPC
       - MeatwagonLPC
       - MatabeleLPC

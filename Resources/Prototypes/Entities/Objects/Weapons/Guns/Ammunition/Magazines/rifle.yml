@@ -47,7 +47,7 @@
 
 - type: entity
   id: MagazineRifleEmpty
-  name: "25-round magazine (7.62x51mm USM)"
+  name: "25-round magazine (7.62x51mm USM any)"
   suffix: empty
   parent: MagazineRifle
   components:

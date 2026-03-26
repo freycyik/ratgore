@@ -34,15 +34,13 @@
     fixtures:
       fix1:
         shape:
-          !type:PolygonShape
-            vertices:
-            - "-0.5,-0.5"
-            - "0.5,0.5"
-            - "0.5,-0.5"
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
         mask:
         - FullTileMask
         layer:
         - WallLayer
+        density: 1000
 
 # Wall variations
 - type: entity
@@ -65,19 +63,6 @@
   - type: Icon
     sprite: _NF/Structures/Walls/solid_reinforced_diagonal.rsi
     state: state0
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PolygonShape
-            vertices:
-            - "-0.5,-0.5"
-            - "0.5,0.5"
-            - "0.5,-0.5"
-        mask:
-        - FullTileMask
-        layer:
-        - WallLayer
   - type: Occluder
     enabled: false
 
@@ -101,19 +86,6 @@
   - type: Icon
     sprite: _NF/Structures/Walls/wood_diagonal.rsi
     state: state0
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PolygonShape
-            vertices:
-            - "-0.5,-0.5"
-            - "0.5,0.5"
-            - "0.5,-0.5"
-        mask:
-        - FullTileMask
-        layer:
-        - WallLayer
   - type: Occluder
     enabled: false
 
@@ -137,18 +109,5 @@
   - type: Icon
     sprite: _NF/Structures/Walls/uranium_diagonal.rsi
     state: state0
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PolygonShape
-            vertices:
-            - "-0.5,-0.5"
-            - "0.5,0.5"
-            - "0.5,-0.5"
-        mask:
-        - FullTileMask
-        layer:
-        - WallLayer
   - type: Occluder
     enabled: false

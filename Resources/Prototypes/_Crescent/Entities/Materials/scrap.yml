@@ -445,7 +445,7 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      RefinedScrapTitanium: 100
+      RefinedScrapTitanium: 500
 
 - type: entity
   id: RefinedTitaniumScrap1

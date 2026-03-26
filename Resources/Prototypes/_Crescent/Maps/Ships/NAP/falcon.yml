@@ -1,0 +1,34 @@
+- type: vessel
+  id: Falcon
+  name: NAP Falcon
+  description: |
+    A sleek American ultra-light strike shuttle, built for fast hit-and-run operations. The Falcon is perfect for flanking attacks. Are you even reading this man?
+    LOADOUT: 1x 48mm missile 
+    MINIMUM CREW: 1x Pilot
+  price: 20000
+  category: Small
+  group: None
+  path: /Maps/_Crescent/Shuttles/NAP/falcon.yml
+
+- type: gameMap
+  id: Falcon
+  mapName: 'NAP Falcon'
+  mapPath: /Maps/_Crescent/Shuttles/NAP/falcon.yml
+  minPlayers: 0
+  stations:
+    Falcon:
+      stationProto: StandardCrescentExpeditionVessel
+      components:
+        - type: VesselIcon
+          iffIcon:
+            sprite: _Crescent/ShipIcons/ifficons.rsi
+            state: ultralight
+        - type: StationNameSetup
+          mapNameTemplate: 'NAP Falcon {1}'
+          nameGenerator:
+           !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: VesselDesignation
+          designation: vessel-designation-expeditions
+        - type: VesselDescription
+          description: Pirate hunter Ultra Light.

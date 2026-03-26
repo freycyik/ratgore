@@ -32,6 +32,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: Climbable
+  - type: Dumpable
 
   # orebox-specific
   - type: Sprite

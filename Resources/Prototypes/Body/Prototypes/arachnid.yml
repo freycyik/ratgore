@@ -19,6 +19,7 @@
         stomach: OrganArachnidStomach
         liver: OrganArachnidLiver
         kidneys: OrganArachnidKidneys
+        spine: OrganCrescentDummy # Why do you need to do this to add an empty organ slot.
         dermis: OrganCrescentDummy # Why do you need to do this to add an empty organ slot.
       connections:
       - right arm

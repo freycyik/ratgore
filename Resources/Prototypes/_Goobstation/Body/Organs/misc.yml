@@ -1,0 +1,38 @@
+- type: entity
+  parent: BaseHumanOrganUnGibbableUnEdible
+  id: OrganHeartSandevistan
+  name: IPM TT-48 Sandevistan
+  description: Illegal cyberware that replaces the user's heart and allows them to greatly increase their speed for the cost of the endurance.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Misc/sandevistan.rsi
+    state: icon
+  - type: Spine
+  - type: Organ
+    slotId: spine
+    onAdd:
+    - type: SandevistanUser
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - InterdyneSandevistanInterdyne
+
+- type: entity
+  parent: BaseHumanOrganUnGibbableUnEdible
+  id: OrganHeartBerserker
+  name: IPM TT-91 Berserker heart
+  description: A next-gen combat circulatory core that allows the user to enter a berserk state, greatly increasing their speed and reflexes for a short time at the cost of endurance and some pain resistance. Highly illegal.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Misc/berserker_heart.rsi
+    state: icon
+  - type: Spine
+  - type: Organ
+    slotId: spine
+  - type: OrganActions
+    actions:
+    - ActionActivateBerserkerImplant
+  - type: ReverseEngineering # SectorCrescent
+    difficulty: 4
+    recipes:
+      - InterdyneBerserkerInterdyne
