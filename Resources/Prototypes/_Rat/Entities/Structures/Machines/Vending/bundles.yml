@@ -1,0 +1,35 @@
+- type: entity
+  id: CMVendorBundleRiflemanApparelNCWL
+  name: базовое снаряжение лрнп
+  description: базовое снаряжение ЛРНП. Включает в себя ГПС, джетпак, магнитные сапоги и остальное.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite:  _Crescent/Structures/syndicatearmory.rsi
+    state: "off"
+  - type: CMVendorBundle
+    bundle:
+    - ClothingHandsGlovesCombat
+    - ClothingMaskNCWLBalaclava
+    - HandheldGPSBasic
+    - DoubleEmergencyOxygenTankFilled
+    - JetpackBlackFilled
+    - ClothingShoesBootsMagNCWL
+
+- type: entity
+  id: CMVendorBundleRiflemanApparelDSM
+  name: базовое снаряжение бмс
+  description: базовое снаряжение БМС. Включает в себя ГПС, джетпак, магнитные сапоги и остальное.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite:  _Crescent/Structures/syndicatearmory.rsi
+    state: "off"
+  - type: CMVendorBundle
+    bundle:
+    - ClothingHandsGlovesImperialLonggloves
+    - ClothingMaskImperialCombatGasmask
+    - HandheldGPSBasic
+    - DoubleEmergencyOxygenTankFilled
+    - JetpackBlackFilled
+    - ClothingShoesBootsMagDSM

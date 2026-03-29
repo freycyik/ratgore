@@ -304,10 +304,10 @@
 
 - type: listing
   id: StoreListingGSCExplosiveBundle
-  name: C-4 Explosive Bundle.
-  description: A bag of composition C-4 predating the Nanotrasen expansion into the Crescent.
+  name: BreachingCharge Explosive Bundle.
+  description: A bag of composition Breaching Charge predating the Nanotrasen expansion into the Crescent.
   icon: { sprite: /Textures/Clothing/Back/Duffels/syndicate.rsi, state: icon }
-  productEntity: ClothingBackpackDuffelSyndicateC4tBundle
+  productEntity: ClothingBackpackDuffelSyndicateBreachingChargetBundle
   cost:
     PlunderGSC: 4
   categories:
@@ -529,7 +529,7 @@
   icon: { sprite: /Textures/_Crescent/Objects/Weapons/Guns/svds.rsi, state: icon }
   productEntity: WeaponRifleSVDMarksman
   cost:
-    PlunderGSC: 10
+    PlunderGSC: 14
   categories:
   - StoreCategoryGSCWeapons
 

@@ -497,5 +497,14 @@ Entries:
     id: 66
     time: '2026-03-26T12:28:59.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/78
+  - author: freycyik
+    changes:
+      - type: Add
+        message: Добавлены вендоры из РМС для мажор фракций. Там можно взять базовое снаряжение
+      - type: Tweak
+        message: Горлакс теперь не может купить вещмешок С4, а лишь вещмешок прорывных зарядов
+    id: 67
+    time: '2026-03-27T12:31:45.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/84
 Name: Rat
 Order: -1

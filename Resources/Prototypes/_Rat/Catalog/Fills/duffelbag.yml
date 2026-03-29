@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateBreachingChargetBundle
+  name: syndicate BreachingCharge bundle
+  description: "Contains a lot of BreachingCharge charges."
+  components:
+  - type: StorageFill
+    contents:
+      - id: BreachingCharge
+        amount: 8
