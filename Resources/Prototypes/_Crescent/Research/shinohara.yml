@@ -323,19 +323,6 @@
   - BoriaticComposterFlatpack
 
 - type: technology
-  id: ShinoharaMantisblades
-  name: research-technology-shinohara-mantisblades
-  icon:
-    sprite: _Crescent/Objects/Misc/cybernetics.rsi
-    state: mantisblade
-  discipline: Corporate
-  tier: 2
-  cost: 5000
-  recipeUnlocks:
-  - CyberneticsMantisBladeRight
-  - CyberneticsMantisBladeLeft
-
-- type: technology
   id: ShinoharaLightDestroyer
   name: research-technology-shinohara-light-destroyer
   icon:
