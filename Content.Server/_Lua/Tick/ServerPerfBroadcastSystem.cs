@@ -1,4 +1,4 @@
-﻿using Content.Shared._Lua.Performance;
+using Content.Shared._Lua.Performance;
 using Robust.Server.Player;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;

@@ -4,10 +4,14 @@
   description: job-description-governor
   playTimeTracker: JobGovernorDSM
   ranks:
+    RatRankNobleEmperor:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobGovernorDSM
+      min: 3600000 # 1000 hours
     RatRankNobleArchduke:
     - !type:CharacterPlaytimeRequirement
       tracker: JobGovernorDSM
-      min: 36000 # 10 hours
+      min: 144000 # 40 hours
     RatRankNobleGrandDuke: []
   weight: 100
   startingGear: GovernorGear
@@ -35,8 +39,6 @@
   special:
   - !type:AddComponentSpecial
     components:
-      - type: ChatRank
-        rank: crescent-rank-baron
       - type: HullrotFaction
         faction: DSM
       - type: LanguageAdder
