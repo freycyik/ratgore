@@ -1,7 +1,7 @@
 - type: gameMap
   id: AuroraImperialis
-  mapName: 'БМС Aurora Imperialis'
-  mapPath: /Maps/_Rat/Stations/auroraİmperialis.yml # taleryn-version
+  mapName: 'БМС Аврора'
+  mapPath: /Maps/_Rat/Stations/aurora.yml # taleryn-version
   minPlayers: 0
   stations:
     AuroraImperialis:
@@ -14,7 +14,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: capital
         - type: StationNameSetup
-          mapNameTemplate: 'БМС Aurora Imperialis'
+          mapNameTemplate: 'БМС Аврора'
         - type: VesselDesignation
           designation: vessel-designation-headquarters
         - type: VesselDescription
