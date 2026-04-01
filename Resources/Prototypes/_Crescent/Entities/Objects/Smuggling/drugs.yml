@@ -221,3 +221,136 @@
     price: 1000
   - type: Contraband
     value: 5
+
+- type: entity
+  name: naiser autoinjector
+  parent: ChemicalMedipen
+  id: NaiserAutoinjector
+  description: не такой утончённый как кайзер, но все ещё боевой препарат - обладающий эфектами Изгнания с малым числом недостатков. Является дешёвым аналогом Кайзера
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Autoinjectors/kaiser.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 40
+    onlyAffectsMobs: false
+    injectOnly: true
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 40
+        reagents:
+        - ReagentId: Naiser
+          Quantity: 25
+        - ReagentId: Ephedrine
+          Quantity: 15
+  - type: Tag
+    tags: []
+  - type: Contraband
+    value: 10
+
+- type: entity
+  name: JV-102 autoinjector
+  parent: ChemicalMedipen
+  id: JV102AutoInjector
+  description: дешёвый, но все ещё универсальный гель-лубрикант. Он повышает эффективность работы живых тканей, даже если это происходит против воли организма. Изготовлен компанией Carthage Industries.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Autoinjectors/jv201.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 30
+    onlyAffectsMobs: false
+    injectOnly: true
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: JV102
+          Quantity: 25
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+  - type: Tag
+    tags: []
+  - type: StaticPrice
+    price: 1000
+  - type: Contraband
+    value: 5
+
+- type: entity
+  name: exileminus autoinjector
+  parent: ChemicalMedipen
+  id: ExileminusAutoinjector
+  description: Дешёвый и распространённый боевой стимулятор, используемыйдля лечения ран, полученных в бою, и поддержания оперативника на ногах в течение некоторого времени.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Autoinjectors/exile.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 30
+    onlyAffectsMobs: false
+    injectOnly: true
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: ExileMinus
+          Quantity: 25
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+  - type: Tag
+    tags: []
+  - type: Contraband
+    value: 5
+
+- type: entity
+  name: fall autoinjector
+  parent: ChemicalMedipen
+  id: FallAutoinjector
+  description: Ещё более дешёвый, легко производимый боевой стимулятор, чаще всего используемый боевыми пилотами. Известен тем, что вызывает продолжительную дрожь.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/Autoinjectors/crash.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: fall
+          Quantity: 15
+  - type: Tag
+    tags: []
+  - type: StaticPrice
+    price: 1000
+  - type: Contraband
+    value: 3

@@ -1627,6 +1627,10 @@
       - WeaponCaseGl
       - WeaponCaseAmmo
       - DroneElectronicsCircuit
+      - NaiserAutoinjector
+      - JV102AutoInjector
+      - ExileminusAutoinjector
+      - FallAutoinjector 
   - type: MaterialStorageMagnetPickup
     magnetEnabled: True
 

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Robust.Shared.Utility;
 using System.Linq;
 using Robust.Shared.Threading;
@@ -9,6 +10,12 @@ namespace Content.Server.Power.Pow3r
     {
         private UpdateNetworkJob _networkJob;
         private bool _disableParallel;
+        private readonly List<NodeId> _dirtyLoads = new(); // Forge-Change
+        private readonly List<NodeId> _dirtyBatteries = new(); // Forge-Change
+        private readonly object _dirtyLock = new(); // Forge-Change
+
+        public IReadOnlyList<NodeId> DirtyLoads => _dirtyLoads; // Forge-Change
+        public IReadOnlyList<NodeId> DirtyBatteries => _dirtyBatteries; // Forge-Change
 
         public BatteryRampPegSolver(bool disableParallel = false)
         {
@@ -33,12 +40,16 @@ namespace Content.Server.Power.Pow3r
 
         public void Tick(float frameTime, PowerState state, IParallelManager parallel)
         {
+            _dirtyLoads.Clear(); // Forge-Change
+            _dirtyBatteries.Clear(); // Forge-Change
+
             ClearLoadsAndSupplies(state);
 
             state.GroupedNets ??= GroupByNetworkDepth(state);
             DebugTools.Assert(state.GroupedNets.Select(x => x.Count).Sum() == state.Networks.Count);
             _networkJob.State = state;
             _networkJob.FrameTime = frameTime;
+            ValidateNetworkGroups(state, state.GroupedNets);
 
             // Each network height layer can be run in parallel without issues.
             foreach (var group in state.GroupedNets)
@@ -73,6 +84,15 @@ namespace Content.Server.Power.Pow3r
             {
                 if (load.Paused)
                     continue;
+
+                load.LastReceivingPower = load.ReceivingPower; // Forge-Change
+                if (load.LastReceivingPower != 0f) // Forge-Change
+                {
+                    lock (_dirtyLock) // Forge-Change
+                    {
+                        _dirtyLoads.Add(load.Id); // Forge-Change
+                    }
+                }
 
                 load.ReceivingPower = 0;
             }
@@ -203,7 +223,16 @@ namespace Content.Server.Power.Pow3r
                 if (!load.Enabled || load.DesiredPower == 0 || load.Paused)
                     continue;
 
-                load.ReceivingPower = load.DesiredPower * supplyRatio;
+                var newReceiving = load.DesiredPower * supplyRatio; // Forge-Change
+                if (!MathHelper.CloseToPercent(load.LastReceivingPower, newReceiving)) // Forge-Change
+                {
+                    lock (_dirtyLock) // Forge-Change
+                    {
+                        _dirtyLoads.Add(loadId); // Forge-Change
+                    }
+                }
+
+                load.ReceivingPower = newReceiving; // Forge-Change
             }
 
             // Distribute supply to batteries
@@ -245,7 +274,8 @@ namespace Content.Server.Power.Pow3r
                 }
             }
 
-            if (unmet <= 0 || totalBatterySupply <= 0)
+            // Return if normal supplies met all demand or there are no supplying batteries
+            if (unmet <= 0 || totalMaxBatterySupply <= 0)
                 return;
 
             // Target output capacity for batteries
@@ -280,8 +310,9 @@ namespace Content.Server.Power.Pow3r
 
                 battery.SupplyRampTarget = battery.MaxEffectiveSupply * relativeTargetBatteryOutput - battery.CurrentReceiving * battery.Efficiency;
 
-                DebugTools.Assert(battery.SupplyRampTarget + battery.CurrentReceiving * battery.Efficiency <= battery.LoadingNetworkDemand
-                    || MathHelper.CloseToPercent(battery.SupplyRampTarget + battery.CurrentReceiving * battery.Efficiency, battery.LoadingNetworkDemand, 0.001));
+                // #Frontier - This is causing server crashes on debug builds, disabling it for now. Happens when big new group of demanding machines turn on causing a surge.
+                //DebugTools.Assert(battery.MaxEffectiveSupply * relativeTargetBatteryOutput <= battery.LoadingNetworkDemand
+                //    || MathHelper.CloseToPercent(battery.MaxEffectiveSupply * relativeTargetBatteryOutput, battery.LoadingNetworkDemand, 0.001));
             }
         }
 
@@ -308,6 +339,16 @@ namespace Content.Server.Power.Pow3r
 
                 battery.SupplyingMarked = false;
                 battery.LoadingMarked = false;
+
+                if (!MathHelper.CloseToPercent(battery.LastCurrentSupply, battery.CurrentSupply)) // Forge-Change
+                {
+                    lock (_dirtyLock) // Forge-Change
+                    {
+                        _dirtyBatteries.Add(battery.Id); // Forge-Change
+                    }
+                }
+
+                battery.LastCurrentSupply = battery.CurrentSupply; // Forge-Change
             }
         }
 
@@ -325,7 +366,75 @@ namespace Content.Server.Power.Pow3r
                     RecursivelyEstimateNetworkDepth(state, network, groupedNetworks);
             }
 
+            ValidateNetworkGroups(state, groupedNetworks);
             return groupedNetworks;
+        }
+
+        public void Validate(PowerState state) // Forge-Change
+        {
+            if (state.GroupedNets == null) // Forge-Change
+                throw new InvalidOperationException("We don't have grouped networks cached??"); // Forge-Change
+
+            ValidateNetworkGroups(state, state.GroupedNets); // Forge-Change
+        }
+
+        /// <summary>
+        /// Validate that network grouping is up to date. I.e., that it is safe to solve each networking in a given
+        /// group in parallel. This assumes that batteries are the only device that connects to multiple networks, and
+        /// is thus the only obstacle to solving everything in parallel.
+        /// </summary>
+        [Conditional("DEBUG")]
+        private void ValidateNetworkGroups(PowerState state, List<List<Network>> groupedNetworks)
+        {
+            HashSet<Network> nets = new();
+            HashSet<NodeId> netIds = new();
+            foreach (var layer in groupedNetworks)
+            {
+                nets.Clear();
+                netIds.Clear();
+
+                foreach (var net in layer)
+                {
+                    foreach (var batteryId in net.BatteryLoads)
+                    {
+                        var battery = state.Batteries[batteryId];
+                        if (battery.LinkedNetworkDischarging == default)
+                            continue;
+
+                        var subNet = state.Networks[battery.LinkedNetworkDischarging];
+                        if (battery.LinkedNetworkDischarging == net.Id)
+                        {
+                            DebugTools.Assert(subNet == net);
+                            continue;
+                        }
+
+                        DebugTools.Assert(!nets.Contains(subNet));
+                        DebugTools.Assert(!netIds.Contains(subNet.Id));
+                        DebugTools.Assert(subNet.Height < net.Height);
+                    }
+
+                    foreach (var batteryId in net.BatterySupplies)
+                    {
+                        var battery = state.Batteries[batteryId];
+                        if (battery.LinkedNetworkCharging == default)
+                            continue;
+
+                        var parentNet = state.Networks[battery.LinkedNetworkCharging];
+                        if (battery.LinkedNetworkCharging == net.Id)
+                        {
+                            DebugTools.Assert(parentNet == net);
+                            continue;
+                        }
+
+                        DebugTools.Assert(!nets.Contains(parentNet));
+                        DebugTools.Assert(!netIds.Contains(parentNet.Id));
+                        DebugTools.Assert(parentNet.Height > net.Height);
+                    }
+
+                    DebugTools.Assert(nets.Add(net));
+                    DebugTools.Assert(netIds.Add(net.Id));
+                }
+            }
         }
 
         private static void RecursivelyEstimateNetworkDepth(PowerState state, Network network, List<List<Network>> groupedNetworks)

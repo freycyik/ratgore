@@ -109,3 +109,18 @@
   - CartridgeDermaline
   - CartridgeSaline
   - ParamedHypo
+
+- type: technology
+  id: AutoinjectorsBiochemical
+  name: research-technology-biochemical-autoinjectors
+  icon:
+    sprite: _Crescent/Objects/Autoinjectors/kaiser.rsi
+    state: medipen
+  discipline: Biochemical
+  tier: 3
+  cost: 12500
+  recipeUnlocks:
+  - NaiserAutoinjector
+  - JV102AutoInjector
+  - ExileminusAutoinjector
+  - FallAutoinjector

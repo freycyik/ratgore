@@ -66,7 +66,7 @@
     - Gnosis
     - Praxis
     - Praetorian
-    - Torturer
+    #- Torturer
 
 - type: entity
   id: NemesisMothershipComputer

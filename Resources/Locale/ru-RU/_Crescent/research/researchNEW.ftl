@@ -29,6 +29,7 @@ research-technology-biochemical-basicchemical = Базовая химия
 research-technology-biochemical-defibrillator = Дефибриллятор
 research-technology-biochemical-stasis = Оборудование стазиса
 research-technology-biochemical-hypo = Гипохимия
+research-technology-biochemical-autoinjectors = Авто-инжекторы
 # ELECTRONICS
 research-technology-electronics-translators = Переводчики
 research-technology-electronics-materials = Базовые компоненты

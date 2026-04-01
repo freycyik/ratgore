@@ -2,8 +2,8 @@
   id: OnionInventory
   startingInventory:
     PillSpaceDrugs: 5
-    CrashAutoinjector: 15
-    JVAutoInjector: 15
+    CrashAutoinjector: 10
+    JVAutoInjector: 10
     NocturineChemistryBottle: 6
     MuteToxinChemistryBottle: 6
     VestineChemistryVial: 6
@@ -24,7 +24,7 @@
     WeaponShotgunDoubleBarreled: 2
     ScalpelShiv: 3
     SecBreachingHammer: 2
-    C4: 10
+    C4: 2
     PipeBomb: 5
     EmpGrenade: 5
     StorageImplanter: 2
@@ -32,10 +32,9 @@
     EmpImplanter: 15 #Disposable
     ScramImplanter: 2
     DnaScramblerImplanter: 2
-    MacroBombImplanter: 2
+    MacroBombImplanter: 1
     MicroBombImplanter: 5
-    HoloparasiteInjector: 5
-    ChameleonProjector: 4
+    HoloparasiteInjector: 2
     Hypopen: 5
     ExplosivePayload: 20
     TimerTrigger: 5
