@@ -18,7 +18,7 @@
         - type: VesselDesignation
           designation: vessel-designation-headquarters
         - type: VesselDescription
-          description: Обветшалый корабль-база, в котором размещается последняя сплочённая имперская армия в этой системе.
+          description: Могущественная имперская крепость, являющаяся последним оплотом порядка в системе.
         - type: VesselMusic
           ambientMusicPrototype: CountsmanMusic
         - type: Grammar
@@ -37,7 +37,7 @@
             SurgeonDSM: [ 4, 4 ]
             TemplarDSM: [ 2, 2 ]
             AdvocatusDSM: [ 1, 1 ]
-            CourtierDSM: [ 6, 6 ]
+            CourtierDSM: [ 10, 10 ]
             LaborDSM: [ 1, 1 ]
             WealthDSM: [ 1, 1 ]
             ForemanDSM: [ 3, 3 ]

@@ -54,11 +54,11 @@ job-description-advocatus = Расследуй дела и проверяй ло
 job-description-advocatustemplar = ОБудь мечом и щитом Следователя. Исполняй его приказы, охраняй его и беспощадно обеспечивай соблюдение Мандата.
 
 # srm#
-job-description-tender = Лечи раны товарищей. Обслуживай суда Святого. Выполняй черновую работу.
-job-description-apprenticehunter = Учись Охоте у назначенного Мастера-Охотника.
-job-description-hunter = Участвуй в Охоте. Лови нонконформистов для продажи.
-job-description-montagne = Помогай своему Надсмотрщику организовывать Охотников в секторе.
-job-description-overseer = Руководи Великой Охотой.
+job-description-tender = Лечи раны товарищей. Обслуживай суда Святого. Обучай учеников азам врачевания и Милости Серрейн. Выполняй черновую работу.
+job-description-apprenticehunter = Учись Охоте у назначенного мастера-охотника.
+job-description-hunter = Участвуй в Охоте. Лови нонконформистов для продажи. Искореняй неверных.
+job-description-montagne = Помогай своему Надсмотрщику организовывать Охотников в секторе. Проводи проповеди и мессы. Неси Слово Святых в сектор.
+job-description-overseer = Руководи Великой Охотой. Исполни божественную Волю.
 
 # shi
 job-description-executive = Управляй активами «Шиногара» в пределах Тайпана.
@@ -110,7 +110,7 @@ job-description-spacer = Будь независимым гражданином 
 job-description-gliess-sheriff = Следи за законом в Глиесс-Санто.
 job-description-gliess-deputy = Помогай Шерифу поддерживать закон в Глиесс-Санто.
 job-description-gliess-dockmaster = Следи, чтобы никто не взорвал твою станцию.
-job-description-dockhand = Помогай Док-мастеру обслуживать Глиесс-Санто.
+job-description-dockhand = Помогай маршалу и минитменам обслуживать Глиесс-Санто.
 
 # conscript-ncwl - for PLANETFALL
 job-description-conscript-ncwl-ship-captain = Пилотируй «Клементину». Следи за её сохранностью и грамотно используй вооружение. Погибни вместе с кораблём.

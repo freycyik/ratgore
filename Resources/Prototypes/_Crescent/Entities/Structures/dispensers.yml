@@ -137,6 +137,7 @@
       # Шиногара
       TradeGoodAlloys: 16000
       TradeGoodGoodScrap: 16000
+      TradeGoodScop: 16000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -182,6 +183,7 @@
       # Шиногара
       TradeGoodAlloys: 16000
       TradeGoodGoodScrap: 16000
+      TradeGoodScop: 16000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:
@@ -225,6 +227,7 @@
       # Шиногара
       TradeGoodAlloys: 16000
       TradeGoodGoodScrap: 16000
+      TradeGoodScop: 16000
   - type: Sprite
     sprite: _Crescent/Structures/cargochute.rsi
     layers:

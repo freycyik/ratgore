@@ -3,6 +3,16 @@
   name: job-name-acolyte
   description: job-description-apprenticehunter
   playTimeTracker: JobAcolyteSRM
+  ranks:
+    RatRankSRMApprenticeHigh:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAcolyteSRM
+      min: 72000 # 20 hours
+    RatRankSRMApprenticeMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobAcolyteSRM
+      min: 36000 # 10 hours
+    RatRankSRMApprenticeJunior: []
   weight: 1
   startingGear: AcolyteGear
   alwaysUseSpawner: true
@@ -61,3 +71,4 @@
     gloves: ClothingHandsGlovesHunter
     pocket2: RomaineBible
     belt: ClothingBeltAssault
+    back: ClothingBackpackSRM

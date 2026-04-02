@@ -63,7 +63,7 @@ job-name-advocatustemplar = Рыцарь-тамплиер
 job-name-tender = Смотритель
 job-name-acolyte = Охотник-ученик
 job-name-hunter = Охотник
-job-name-montagne = Охотник Монтань
+job-name-montagne = Охотник Монтанье
 job-name-overseer = Надзиратель охоты
 
 # shi

@@ -22,11 +22,11 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   icon: "JobIconWatchmaster"
-  supervisors: You answer to your Colonial Marshal and the Deputy Marshal
+  supervisors: job-supervisors-cmm-officer
   canBeAntag: false
   requirements:
   - !type:CharacterOverallTimeRequirement
-    min: 12000
+    min: 36000
   - !type:FactionRequirement
       factionID: "TSP"
   - !type:CharacterTraitRequirement
@@ -69,6 +69,7 @@
     head: ClothingHeadHatWatchmaster
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     pocket1: WeaponPistolHKUSP
     id: WatchmasterPDA
     ears: ClothingHeadsetCMM

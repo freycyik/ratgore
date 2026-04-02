@@ -228,6 +228,18 @@
   #     state: tsp
 
 - type: entity
+  parent: BaseComputerOverwatch
+  id: SRMOverwatchComputer
+  name: overwatch console SRM
+  components:
+  - type: OverwatchConsole
+    faction: SRM
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: tsp
+
+- type: entity
   parent: BoxFolderBase
   abstract: true
   id: BaseOverwatchClipboard
@@ -364,3 +376,11 @@
   components:
   - type: OverwatchConsole
     faction: CD
+
+- type: entity
+  parent: BaseOverwatchClipboard
+  id: SRMOverwatchClipboard
+  name: overwatch console SRM
+  components:
+  - type: OverwatchConsole
+    faction: SRM

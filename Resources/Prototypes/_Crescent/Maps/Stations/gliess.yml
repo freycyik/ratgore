@@ -15,7 +15,7 @@
             sprite: _Crescent/ShipIcons/ifficons.rsi
             state: outpost
         - type: StationNameSetup
-          mapNameTemplate: 'The Refuge'
+          mapNameTemplate: 'ОСР Убежище'
         - type: VesselDesignation
           designation: vessel-designation-headquarters
         - type: Grammar
@@ -62,12 +62,12 @@
           availableJobs:
             MarshalCMM: [ 1, 1 ]
             DeputyMarshalCMM: [ 1, 1 ]
-            WatchmasterCMM: [ 1, 1 ]
+            WatchmasterCMM: [ 2, 2 ]
             OrdnancemanCMM: [ 2, 2 ]
-            MinutemanCMM: [ 7, 7 ]
-            PhysicianCMM: [ 2, 2 ]
+            PhysicianCMM: [ 3, 3 ]
             MachinistCMM: [ 2, 2 ]
-            GliessianDockhand: [ 5, 5 ]
+            MinutemanCMM: [ 6, 6 ]
+            GliessianDockhand: [ 3, 3 ]
             Spacer: [ -1, -1 ]
 
 

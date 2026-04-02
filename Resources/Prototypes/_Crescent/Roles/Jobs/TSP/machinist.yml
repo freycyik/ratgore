@@ -26,7 +26,7 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   icon: "JobIconMachinist"
-  supervisors: You answer to your Colonial Marshal, Deputy Marshal and Watchmaster.
+  supervisors: job-supervisors-cmm-minuteman
   canBeAntag: false
   requirements:
     - !type:FactionRequirement
@@ -68,6 +68,7 @@
     head: ClothingHeadHelmetCMMMachinist
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltUtilityEngineering
+    back: ClothingBackpackMinuteman
     id: MachinistPDA
     ears: ClothingHeadsetCMM
     pocket1: WeaponPistolHKUSP

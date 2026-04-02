@@ -3,7 +3,17 @@
   name: job-name-overseer
   description: job-description-overseer
   playTimeTracker: JobOverseerSRM
-  weight: 99
+  ranks:
+    RatRankSRMOverseerSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOverseerSRM
+      min: 72000 # 20 hours
+    RatRankSRMOverseerMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobOverseerSRM
+      min: 36000 # 10 hours
+    RatRankSRMOverseerJunior: []
+  weight: 100
   startingGear: OverseerGear
   alwaysUseSpawner: true
   requireAdminNotify: false
@@ -46,10 +56,12 @@
           - Saintspact
           - HighImperial
           - LowImperial
+          - Tradeband
         addUnderstood:
           - Saintspact
           - HighImperial
           - LowImperial
+          - Tradeband
       - type: InnatePsionicPowers
         powersToAdd:
           - TelepathyPower
@@ -67,3 +79,4 @@
     gloves: ClothingHandsGlovesHunter
     pocket2: RomaineBible
     belt: ClothingBeltAssault
+    back: ClothingBackpackSRM

@@ -21,12 +21,12 @@
       tracker: JobMinutemanCMM
       min: 36000 # 10 hours
     RatRankCMMMinutemanNovice: []
-  weight: 26
+  weight: 18
   startingGear: MinutemanGear
   alwaysUseSpawner: true
   requireAdminNotify: false
-  icon: "JobIconMinuteman"
-  supervisors: You answer to your Colonial Marshal, Deputy Marshal and Watchmaster.
+  icon: "JobIconOrdnanceman"
+  supervisors: job-supervisors-cmm-minuteman
   canBeAntag: false
   requirements:
     - !type:FactionRequirement
@@ -71,6 +71,7 @@
     head: ClothingHeadHatMinuteman
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     pocket1: WeaponPistolHKUSP
     id: MinutemanPDA
     ears: ClothingHeadsetCMM

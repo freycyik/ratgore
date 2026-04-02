@@ -788,6 +788,7 @@ public sealed class OverwatchSystem : EntitySystem
             "SAW" => "overwatch-title-saw",
             "GSC" => "overwatch-title-gsc",
             "CD" => "overwatch-title-cd",
+            "SRM" => "overwatch-title-srm",
             _ => "overwatch-title-default"
         };
 
@@ -809,6 +810,7 @@ public sealed class OverwatchSystem : EntitySystem
             "SAW" => Color.FromHex("#9b0000"),
             "GSC" => Color.FromHex("#9b0000"),
             "CD" => Color.FromHex("#9b0000"),
+            "SRM" => Color.FromHex("#015124"),
             _ => Color.DarkGray
         };
     }

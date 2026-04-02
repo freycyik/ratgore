@@ -18,10 +18,12 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   icon: "JobIconMarshal"
-  supervisors: You answer to your heart's contempt, whether it be protecting the sector's civilians or aiding criminal organizations.
+  supervisors: job-supervisors-cmm-marshal
   canBeAntag: false
   requirements:
     - !type:CharacterWhitelistRequirement
+    - !type:CharacterOverallTimeRequirement
+      min: 126000
     - !type:FactionRequirement
         factionID: "TSP"
     - !type:CharacterTraitRequirement
@@ -66,7 +68,8 @@
     head: ClothingHeadHatCMMMarshal
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
-    pocket1: WeaponRevolverSnubnose
+    back: ClothingBackpackMinuteman
+    pocket1: WeaponCaptainRevolverShotgun
     pocket2: RatRubberStampCMMMarshal
     id: MarshalPDA
     ears: ClothingHeadsetCMM

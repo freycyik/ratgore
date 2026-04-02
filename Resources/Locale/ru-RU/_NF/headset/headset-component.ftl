@@ -1,2 +1,2 @@
 chat-radio-traffic = Короткая волна 500м
-chat-radio-nfsd = Шерифы Глиссии
+chat-radio-nfsd = Минитмены

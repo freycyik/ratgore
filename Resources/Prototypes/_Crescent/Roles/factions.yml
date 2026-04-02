@@ -133,22 +133,27 @@
     state: fourfamilies
 
 - type: faction
-  name: "Saint Romaine's Militia"
+  name: "Ополчение Святого Ромейна"
   id: SRM
   descriptionPrefix: |
-    MINIMUM PLAYTIME: 10 HOURS / 3 ROUNDS
-    This faction is only very rarely present in the Taypan system.
-    Restricted to Special Midround Spawns
-  buttonColor: Black
+    МИНИМАЛЬНОЕ ВРЕМЯ: 10 ЧАСОВ / 3 РАУНДА
+    Эта фракция очень редко присутствует в системе Тайпан.
+    Ограничены особыми мидраунд спавнами
+  buttonColor: "#001d18"
   description: |
-    Formerly several fireteams of the Imperial Compliance Corps united under a single wing, the SRM have
-    found their new identity in the reclamation of escaped Imperial 'assets', as well as the 'conscription'
-    of new ones. Essentially a slaver's guild with a self-appointed divine edge, they operate out of the
-    Domain system under their Imperial overlords, but often stray into Taypan to capture victims for
-    the rebuilding effort.
+    Когда-то несколько огневых команд Имперского корпуса подчинения были объединены под одним крылом,
+    но теперь Великая Охота обрела свою новую сущность в возвращении сбежавших имперских "активов",
+    а также в "призыве на военную службу" новых. По сути, это гильдия работорговцев
+    с самозваным божественным превосходством, они действуют за пределами системы Доменов под
+    руководством своих имперских повелителей, но часто забредают на Тайпан, чтобы захватить
+    жертв для восстановления.
+
+    Фанатики Святого Ромейна, которые не желают ничего, кроме крови атирийцев. Однако в наши дни
+    кажется, что они проводят больше времени, прячась в тумане, чем выслеживая свою добычу.
+    Вы все равно должны быть осторожны во время их Охоты, если вы не человек - они не склонны к милосердию.
   color: "#9FED58"
   weight: 3
-  enabled: false
+  enabled: true
   icon:
     sprite: /Textures/_Crescent/faction_icons.rsi
     state: srm
@@ -160,7 +165,7 @@
     MINIMUM PLAYTIME: 10 HOURS / 3 ROUNDS
     This faction is only very rarely present in the Taypan system.
     Restricted to Special Midround Spawns
-  buttonColor: Black
+  buttonColor: "#ffbf00"
   description: |
     An oligarchic authoritarian regime, the successor state to the old Mandate, that could now be best described as fascist.
     They are held responsible for the death of the old Kaiser and have been fighting a civil war for decades.

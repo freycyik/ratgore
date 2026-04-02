@@ -540,5 +540,12 @@ Entries:
     id: 71
     time: '2026-04-01T13:12:14.0000000+00:00'
     url: https://github.com/ss14-art/ratgore/pull/95
+  - author: nabegator220
+    changes:
+      - type: Add
+        message: Mass cloak console for TAP and SRM.
+    id: 72
+    time: '2026-04-02T04:43:22.0000000+00:00'
+    url: https://github.com/ss14-art/ratgore/pull/98
 Name: Rat
 Order: -1

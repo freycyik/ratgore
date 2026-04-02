@@ -12,15 +12,11 @@
       inverted: true
       species:
         - Voidborn
-    - !type:CharacterOverallTimeRequirement
-      min: 10800
   startingGear: DockhandGear
   icon: "JobIconDockhand"
   supervisors: job-supervisors-gliess
   accessGroups:
   - GeneralAccess
-  access:
-  - GliessSheriff
 
   special:
   - !type:AddComponentSpecial

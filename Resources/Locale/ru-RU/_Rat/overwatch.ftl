@@ -52,6 +52,7 @@ overwatch-title-ipm = ЧЕРНАЯ СЕТЬ
 overwatch-title-saw = ЧЕРНАЯ СЕТЬ
 overwatch-title-gsc = ЧЕРНАЯ СЕТЬ
 overwatch-title-cd = ЧЕРНАЯ СЕТЬ
+overwatch-title-srm = ГЛАЗ ОХОТНИКА
 overwatch-title-default = Overwatch
 
 overwatch-announcement-title = [{ $overwatchTitle }] - { $targetName }
@@ -79,6 +80,8 @@ ent-GSCOverwatchComputer = консоль overwatch «ЧЕРНАЯ СЕТЬ»
     .desc = Консоль системы наблюдения «ЧЕРНАЯ СЕТЬ» GSC. Децентрализованная сеть наблюдения для независимых операторов.
 ent-CDOverwatchComputer = консоль overwatch «ЧЕРНАЯ СЕТЬ»
     .desc = Консоль системы наблюдения «ЧЕРНАЯ СЕТЬ» CD. Децентрализованная сеть наблюдения для независимых операторов.
+ent-SRMOverwatchComputer = консоль overwatch «ГЛАЗ ОХОТНИКА»
+    .desc = Консоль системы наблюдения «ГЛАЗ ОХОТНИКА» SRM. Позволяет отслеживать членов фракции через носимые камеры и координировать операции отрядов.
 
 ent-BaseOverwatchClipboard = цифровой планшет overwatch
     .desc = Громоздкий цифровой планшет, содержащий информацию о членах фракции. При таком количестве компрометирующих документов его следует беречь.
@@ -97,6 +100,8 @@ ent-SAWOverwatchClipboard = цифровой планшет overwatch «ЧЕРН
 ent-GSCOverwatchClipboard = цифровой планшет overwatch «ЧЕРНАЯ СЕТЬ»
     .desc = { ent-BaseOverwatchClipboard.desc }
 ent-CDOverwatchClipboard = цифровой планшет overwatch «ЧЕРНАЯ СЕТЬ»
+    .desc = { ent-BaseOverwatchClipboard.desc }
+ent-SRMOverwatchClipboard = цифровой планшет overwatch «ГЛАЗ ОХОТНИКА»
     .desc = { ent-BaseOverwatchClipboard.desc }
 
 overwatch-clipboard-computer-verb-text = Переключить меню overwatch

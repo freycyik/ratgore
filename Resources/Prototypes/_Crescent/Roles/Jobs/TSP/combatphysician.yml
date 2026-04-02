@@ -26,7 +26,7 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   icon: "JobIconCMMPhysician"
-  supervisors: You answer to your Colonial Marshal, Deputy Marshal and Watchmaster.
+  supervisors: job-supervisors-cmm-minuteman
   canBeAntag: false
   requirements:
     - !type:FactionRequirement
@@ -71,6 +71,7 @@
     head: ClothingHeadHatMinuteman
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     id: PhysicianPDA
     ears: ClothingHeadsetCMM
     pocket1: WeaponPistolHKUSP

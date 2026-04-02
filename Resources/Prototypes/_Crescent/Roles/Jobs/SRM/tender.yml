@@ -3,6 +3,16 @@
   name: job-name-tender
   description: job-description-tender
   playTimeTracker: JobTenderSRM
+  ranks:
+    RatRankSRMTenderSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobTenderSRM
+      min: 72000 # 20 hours
+    RatRankSRMTenderMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobTenderSRM
+      min: 36000 # 10 hours
+    RatRankSRMTenderJunior: []
   weight: 2
   startingGear: TenderGear
   alwaysUseSpawner: true
@@ -20,7 +30,7 @@
       species:
         - Human
     - !type:SexRequirement
-      sex: Male
+      sex: Female
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -68,3 +78,4 @@
     pocket1: RomaineBible
     pocket2: RomaineBible
     belt: ClothingBeltAssault
+    back: ClothingBackpackSRM

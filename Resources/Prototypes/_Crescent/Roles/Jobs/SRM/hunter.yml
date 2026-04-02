@@ -3,6 +3,28 @@
   name: job-name-hunter
   description: job-description-hunter
   playTimeTracker: JobHunterSRM
+  ranks:
+    RatRankSRMHunterSrLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHunterSRM
+      min: 180000 # 50 hours
+    RatRankSRMHunterHigh:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHunterSRM
+      min: 144000 # 40 hours
+    RatRankSRMHunterLead:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHunterSRM
+      min: 108000 # 30 hours
+    RatRankSRMHunterSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHunterSRM
+      min: 72000 # 20 hours
+    RatRankSRMHunterMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobHunterSRM
+      min: 36000 # 10 hours
+    RatRankSRMHunterJunior: []
   weight: 3
   startingGear: HunterGear
   alwaysUseSpawner: true
@@ -62,3 +84,4 @@
     gloves: ClothingHandsGlovesHunter
     pocket2: RomaineBible
     belt: ClothingBeltAssault
+    back: ClothingBackpackSRM

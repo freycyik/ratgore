@@ -1,34 +1,34 @@
 - type: storeCategory
   id: StoreCategorySRMWeapons
-  name: Weapons
+  name: Оружие
   priority: 4
 
 - type: storeCategory
   id: StoreCategorySRMAmmo
-  name: Ammo
+  name: Боеприпасы
   priority: 6
 
 - type: storeCategory
   id: StoreCategorySRMSuits
-  name: Suits
+  name: Костюмы
   priority: 8
 
 - type: storeCategory
   id: StoreCategorySRMExplosives
-  name: Explosives
+  name: Взрывчатка
   priority: 10
 
 - type: storeCategory
   id: StoreCategorySRMPietyRomaine
-  name: Piety Scraps
+  name: Обрывки писания
   priority: 12
 
 #Weapons
 
 - type: listing
   id: StoreListingSRMVibrokhopesh
-  name: Vibrokhopesh
-  description: A vibrokhopesh, the signature weapon of the Militia.
+  name: Виброхопеш
+  description: Виброхопеш, фирменное оружие охотников.
   icon: { sprite: _Crescent/Clothing/SRM/Belt/sheath.rsi, state: sheath-sabre }
   productEntity: ClothingBeltSheathKhopeshFilled
   cost:
@@ -38,8 +38,8 @@
 
 - type: listing
   id: StoreListingSRMDuelingKhopesh
-  name: Dueling Khopesh
-  description: A shipment of dueling khopeshes, lifted from a Mandate trading convoy.
+  name: Дуэльный хопеш
+  description: Партия дуэльных хопешей, изъятых из торгового конвоя Мандата.
   icon: { sprite: _Crescent/Clothing/SRM/Belt/sheath.rsi, state: sheath-sabre }
   productEntity: CrateSRMDuelingKhopesh
   cost:
@@ -49,8 +49,8 @@
 
 - type: listing
   id: StoreListingSRMRifleHunter
-  name: The Hunter
-  description: The Hunter rifle, a reliable but poorly designed firearm for use by Militia forces, comes with a rifle and two magazines.
+  name: Винтовка "Охотник"
+  description: Охотничья винтовка, надёжное, но плохо сконструированное огнестрельное оружие для использования охотниками, поставляется с винтовкой и двумя магазинами.
   icon: { sprite: _Crescent/Objects/Weapons/Guns/hunter.rsi, state: icon }
   productEntity: CrateSRMHunterDMR
   cost:
@@ -60,8 +60,8 @@
 
 - type: listing
   id: StoreListingSRMBeetleSMG
-  name: The Beetle
-  description: The Beetle submachine gun, a compact if not poorly designed firearm for use by Militia forces, comes with a few SMGs and ammo.
+  name: ПП "Жук"
+  description: Пистолет-пулемет Жук, компактное, хотя и неплохо спроектированное огнестрельное оружие для использования охотниками, поставляется с несколькими ПП и боеприпасами к ним.
   icon: { sprite: _Crescent/Objects/Weapons/Guns/beetle.rsi, state: icon }
   productEntity: CrateSRMBeetleSMG
   cost:
@@ -71,8 +71,8 @@
 
 - type: listing
   id: StoreListingSRMLauncher
-  name: Stolen SHI LAM-17 84mm Shipment
-  description: The disposable SHI LAM-17 84mm rocket launcher, damaged in transit.. effectiveness varies, two to a shipment.
+  name: Украденная поставка SHI LAM-17 84mm
+  description: Одноразовая ракетница SHI LAM-17 84mm, повреждённая при транспортировки... эффективность варьируется. От двух в одной партии.
   icon: { sprite: _Crescent/Objects/Weapons/Guns/disposablerpg.rsi, state: icon }
   productEntity: CrateSRMLauncher
   cost:
@@ -86,8 +86,8 @@
 
 - type: listing
   id: StoreListingSRMStandardRifleMag
-  name: 7.62x51mm Standard Magazine
-  description: A standard magazine for the Hunter rifle and compatible 7.62x51mm firearms, comes with a few magazines.
+  name: Стандартный магазин 7.62x51mm
+  description: Стандартный магазин для винтовки Охотник и совместимого огнестрельного оружия калибра 7,62х51 мм, поставляется с несколькими магазинами.
   icon: { sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/7.62mm_mag.rsi, state: icon }
   productEntity: CrateSRMRifleMag
   cost:
@@ -97,8 +97,8 @@
 
 - type: listing
   id: StoreListingSRMUraniumRifleMag
-  name: 7.62x51mm Black-tipped Magazine
-  description: A black-tipped magazine for the Hunter rifle and compatible 7.62x51mm firearms, armor piercing. A few magazines come packaged.
+  name: Магазин с чёрным наконечником 7.62x51mm
+  description: Магазин с чёрным наконечником для охотничьего ружья и совместимого огнестрельного оружия калибра 7,62х51 мм, бронебойный. Несколько магазинов поставляются в комплекте.
   icon: { sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/7.62mm_mag.rsi, state: icon }
   productEntity: CrateSRMRifleMagUranium
   cost:
@@ -108,8 +108,8 @@
 
 - type: listing
   id: StoreListingSRMStandardSMGMagBox
-  name: 9x19mm Standard Magazine Box
-  description: A box of standard magazines for the Beetle submachine gun and compatible 9x19mm firearms.
+  name: Стандартная магазинная коробка 9x19mm
+  description: Коробка со стандартными магазинами для пистолета-пулемета Жук и совместимого огнестрельного оружия калибра 9х19 мм.
   icon: { sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/9x19mm_mag.rsi, state: icon }
   productEntity: BoxMagazinePistolSubMachineGun
   cost:
@@ -119,8 +119,8 @@
 
 - type: listing
   id: StoreListingSRMUraniumSMGMag
-  name: 9x19mm Black-tipped Magazine
-  description: A black-tipped magazine for the Beetle submachine gun and compatible 9x19mm firearms, armor piercing. A few magazines come packaged.
+  name: Магазин с чёрным наконечником 9x19mm
+  description: Магазин с чёрным наконечником для пистолета-пулемета Жук и совместимого огнестрельного оружия калибра 9х19 мм, бронебойный. Несколько магазинов поставляются в комплекте.
   icon: { sprite: _Crescent/Objects/Weapons/Ammunition/Magazine/9x19mm_mag.rsi, state: icon }
   productEntity: CrateSRMSMGMagUranium
   cost:
@@ -141,8 +141,8 @@
 
 - type: listing
   id: StoreListingSRMSumimotoLow
-  name: Sumimoto Low-Yield Ammunition Shipment
-  description: A shipment of sumimoto low-yield rockets.
+  name: Партия маломощных боеприпасов "Сумимото"
+  description: Партия ракет малой мощности "Сумимото".
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi, state: icon }
   productEntity: CrateSRMAmmunitionMissileLowYield
   cost:
@@ -152,8 +152,8 @@
 
 - type: listing
   id: StoreListingSRMSumimotoHigh
-  name: Sumimoto High-Yield Ammunition Shipment
-  description: A shipment of sumimoto high-yield rockets.
+  name: Партия высокомощных боеприпасов "Сумимото"
+  description: Партия мощных ракет "Сумимото".
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi, state: icon }
   productEntity: CrateSRMAmmunitionMissileHighYield
   cost:
@@ -167,8 +167,8 @@
 
 - type: listing
   id: StoreListingSRMHardsuitElite
-  name: Elite Hunter's Hardsuit
-  description: A hardsuit seen typically in the hands of elite hunters, made of proper armor and in House Romaine's colors.
+  name: Элитный скафандр охотника
+  description: Скафандр, который обычно можно увидеть в руках элитных охотников, созданный из соответствующей брони и выполненный в цветах дома Ромейн.
   icon: { sprite: _Crescent/Clothing/SRM/OuterClothing/hardsuitelite.rsi, state: icon }
   productEntity: ClothingOuterHardsuitHunterElite
   cost:
@@ -178,8 +178,8 @@
 
 - type: listing
   id: StoreListingSRMHardsuitHunter
-  name: Hunter's Hardsuit
-  description: A hardsuit made of stitched together materials to insulate and protect the hunter wearing it.
+  name: Скафандр охотника
+  description: Скафандр, изготовленный из сшитых вместе материалов для изоляции и защиты носящего его охотника.
   icon: { sprite: _Crescent/Clothing/SRM/OuterClothing/hardsuit.rsi, state: icon }
   productEntity: ClothingOuterHardsuitHunter
   cost:
@@ -193,8 +193,8 @@
 
 - type: listing
   id: StoreListingSRMIncendiaryHandgrenade
-  name: M14 Incendiary Handgrenade
-  description: An M14 Incendiary handgrenade. A few come packaged.
+  name: Зажигательная граната M14
+  description: Зажигательная граната М14. В комплекте несколько штук.
   icon: { sprite: _Crescent/Objects/Weapons/Grenades/incendiary.rsi, state: icon }
   productEntity: CrateSRMIncendiaryGrenade
   cost:
@@ -204,8 +204,8 @@
 
 - type: listing
   id: StoreListingSRMSmokeHandgrenade
-  name: M18 Smoke Handgrenade
-  description: An M18 Smoke handgrenade. A few come packaged.
+  name: Дымовая граната М18
+  description: Дымовая граната М18. В комплекте несколько штук.
   icon: { sprite: _Crescent/Objects/Weapons/Grenades/smoke.rsi, state: icon }
   productEntity: CrateSRMSmokeGrenade
   cost:
@@ -215,8 +215,8 @@
 
 - type: listing
   id: StoreListingSRMF1Handgrenade
-  name: F1 Handgrenade
-  description: An F1 fragmentation handgrenade. A few come packaged.
+  name: Граната F1
+  description: Осколочная граната F1. В комплекте несколько штук.
   icon: { sprite: _Crescent/Objects/Weapons/Grenades/f1.rsi, state: icon }
   productEntity: CrateSRMFragGrenade
   cost:
@@ -226,8 +226,8 @@
 
 - type: listing
   id: StoreListingSRMG8PoisonHandgrenade
-  name: G-8 Poison Handgrenade
-  description: A G-8 Poison handgrenade. A few come packaged.
+  name: Ядовитая граната G-8
+  description: Ядовитая граната G-8. В комплекте несколько штук.
   icon: { sprite: _Crescent/Objects/Weapons/Grenades/dsm_smoke.rsi, state: icon }
   productEntity: CrateSRMPoisonGrenade
   cost:
@@ -237,8 +237,8 @@
 
 - type: listing
   id: StoreListingSRMG4TwistcapHandgrenade
-  name: G-4 Twistcap Handgrenade
-  description: A G-4 Twistcap handgrenade. A few come packaged.
+  name: Твисткап граната G-4
+  description: Твисткап граната G-4. В комплекте несколько штук.
   icon: { sprite: _Crescent/Objects/Weapons/Grenades/dsm_twist.rsi, state: icon }
   productEntity: CrateSRMTwistcapGrenade
   cost:
@@ -248,8 +248,8 @@
 
 - type: listing
   id: StoreListingSRMG3StickHandgrenade
-  name: G-3 Stick Handgrenade
-  description: A G-3 Stick handgrenade. A few come packaged.
+  name: Липкая граната G-3
+  description: Липкая граната G-3. В комплекте несколько штук.
   icon: { sprite: _Crescent/Objects/Weapons/Grenades/dsm_stick.rsi, state: icon }
   productEntity: CrateSRMStickGrenade
   cost:
@@ -259,8 +259,8 @@
 
 - type: listing
   id: StoreListingSRMExplosiveCharge
-  name: Box of Explsosive Charges
-  description: A box of explosive charges to effectively gain access to a vessel.
+  name: Коробка с разрывными зарядами
+  description: Ящик с зарядами взрывчатки для эффективного проникновения на судно.
   icon: { sprite: Objects/Weapons/Bombs/breaching.rsi, state: icon }
   productEntity: CrateSRMExplosivesBreaching
   cost:
@@ -274,8 +274,8 @@
 
 - type: listing
   id: StoreListingSRMPRLowRomaine
-  name: Piety Scrap
-  description: A scrap of piety, used by hunters to redeem various goods and services. This one appears to be rather worn and damaged.
+  name: Обрывок писания
+  description: Предмет благочестия, используемый охотниками для обмена различных товаров и услуг. Этот предмет выглядит довольно изношенным и поврежденным.
   icon: { sprite: _Crescent/Objects/TradeGoods/deed.rsi, state: icon }
   productEntity: PietyRedeemableLow
   cost:
@@ -285,8 +285,8 @@
 
 - type: listing
   id: StoreListingSRMPRRomaine
-  name: Piety Scrap
-  description: A scrap of piety, used by hunters to redeem various goods and services. This one appears to be in decent shape.
+  name: Обрывок писания
+  description: Частичка благочестия, используемая охотниками для выкупа различных товаров и услуг. Этот, похоже, в приличном состоянии.
   icon: { sprite: _Crescent/Objects/TradeGoods/deed.rsi, state: icon }
   productEntity: PietyRedeemable
   cost:
@@ -296,8 +296,8 @@
 
 - type: listing
   id: StoreListingSRMPRHighRomaine
-  name: Piety Scrap
-  description: A scrap of piety, used by hunters to redeem various goods and services. This one appears to be almost untouched.
+  name: Обрывок писания
+  description: Частичка благочестия, используемая охотниками для выкупа различных товаров и услуг. Этот, похоже, почти не тронут.
   icon: { sprite: _Crescent/Objects/TradeGoods/deed.rsi, state: icon }
   productEntity: PietyRedeemableHigh
   cost:

@@ -18,11 +18,11 @@
   alwaysUseSpawner: true
   requireAdminNotify: false
   icon: "JobIconDeputyMarshal"
-  supervisors: You answer to your Colonial Marshal.
+  supervisors: job-supervisors-cmm-deputy
   canBeAntag: false
   requirements:
     - !type:CharacterOverallTimeRequirement
-      min: 36000
+      min: 64800
     - !type:FactionRequirement
         factionID: "TSP"
     - !type:CharacterTraitRequirement
@@ -68,7 +68,9 @@
     head: ClothingHeadHatCMMDeputyMarshal
     gloves: ClothingHandsGlovesCombat
     belt: ClothingBeltMinutemanPouches
+    back: ClothingBackpackMinuteman
     pocket1: WeaponRevolverSnubnose
+    pocket2: RatRubberStampCMM
     id: DeputyMarshalPDA
     ears: ClothingHeadsetCMM
     outerClothing: ClothingOuterArmorCMMDeputyCarapace

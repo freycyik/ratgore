@@ -3,7 +3,17 @@
   name: job-name-montagne
   description: job-description-montagne
   playTimeTracker: JobMontagneSRM
-  weight: 100
+  ranks:
+    RatRankSRMMontagneSenior:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobMontagneSRM
+      min: 72000 # 20 hours
+    RatRankSRMMontagneMiddle:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobMontagneSRM
+      min: 36000 # 10 hours
+    RatRankSRMMontagneJunior: []
+  weight: 99
   startingGear: MontagneGear
   alwaysUseSpawner: true
   requireAdminNotify: false
@@ -45,10 +55,12 @@
           - Saintspact
           - HighImperial
           - LowImperial
+          - Tradeband
         addUnderstood:
           - Saintspact
           - HighImperial
           - LowImperial
+          - Tradeband
       - type: InnatePsionicPowers
         powersToAdd:
           - TelepathyPower
@@ -66,3 +78,4 @@
     gloves: ClothingHandsGlovesHunter
     pocket2: RomaineBible
     belt: ClothingBeltAssault
+    back: ClothingBackpackSRM
