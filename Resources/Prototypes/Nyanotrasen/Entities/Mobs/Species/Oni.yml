@@ -14,9 +14,9 @@
   - type: Oni
     modifiers:
       coefficients:
-        Blunt: 1.35
-        Slash: 1.25
-        Piercing: 1.25
+        Blunt: 1.25
+        Slash: 1.15
+        Piercing: 1.15
   - type: Body
     prototype: Human
   - type: Damageable
