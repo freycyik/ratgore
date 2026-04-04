@@ -165,6 +165,11 @@ public sealed partial class TTSSystem
             {"ви", "Вэ И"},
             {"ии", "И И"},
             {"осщ", "О Сэ Ща"},
+            {"лрнп", "эЛ эР эН Пэ"},
+            {"бмс", "Бэ эМ Эс"},
+            {"тпш", "Т Пы Ша"},
+            {"квст", "К Вэ эС Тэ"},
+            {"срм", "эС эР эМ"},
         };
 
     private static readonly IReadOnlyDictionary<string, string> ReverseTranslit =

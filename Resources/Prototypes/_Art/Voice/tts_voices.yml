@@ -21,6 +21,7 @@
   name: tts-voice-name-moriarti
   sex: Male
   speaker: moriarti
+  roundStart: false
 
 - type: ttsVoice
   id: Charlotte
@@ -444,6 +445,7 @@
   name: tts-voice-name-azir
   sex: Male
   speaker: azir
+  roundStart: false
 
 - type: ttsVoice
   id: Ekko
@@ -1020,6 +1022,7 @@
   name: tts-voice-name-meepo
   sex: Male
   speaker: meepo_dota_2
+  roundStart: false
 
 - type: ttsVoice
   id: MiranaDota2
@@ -1110,6 +1113,7 @@
   name: tts-voice-name-treant-protector
   sex: Male
   speaker: treant_protector_dota_2
+  roundStart: false
 
 - type: ttsVoice
   id: UrsaDota2
