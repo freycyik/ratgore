@@ -26,24 +26,13 @@
 #Weapons
 
 - type: listing
-  id: StoreListingSRMVibrokhopesh
-  name: Виброхопеш
-  description: Виброхопеш, фирменное оружие охотников.
-  icon: { sprite: _Crescent/Clothing/SRM/Belt/sheath.rsi, state: sheath-sabre }
-  productEntity: ClothingBeltSheathKhopeshFilled
-  cost:
-    PietySRM: 15
-  categories:
-  - StoreCategorySRMWeapons
-
-- type: listing
   id: StoreListingSRMDuelingKhopesh
   name: Дуэльный хопеш
   description: Партия дуэльных хопешей, изъятых из торгового конвоя Мандата.
   icon: { sprite: _Crescent/Clothing/SRM/Belt/sheath.rsi, state: sheath-sabre }
   productEntity: CrateSRMDuelingKhopesh
   cost:
-    PietySRM: 15
+    PietySRM: 10
   categories:
   - StoreCategorySRMWeapons
 
