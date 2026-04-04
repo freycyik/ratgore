@@ -43,7 +43,7 @@
   icon: { sprite: _Crescent/Objects/Misc/lpcchip.rsi, state: icon }
   productEntity: ShipVoucherSaintsfall
   cost:
-    PietySRM: 5
+    PietySRM: 10
   categories:
   - StoreCategorySRMLPC
 
@@ -58,7 +58,7 @@
   icon: { sprite: Objects/Tools/jaws_of_life.rsi, state: syn_jaws_pry }
   productEntity: SyndicateJawsOfLife
   cost:
-    PietySRM: 4
+    PietySRM: 10
   categories:
   - StoreCategorySRMTools
 
@@ -117,7 +117,7 @@
   icon: { sprite: Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
   productEntity: CrateSRMMedkit
   cost:
-    PietySRM: 1
+    PietySRM: 10
   categories:
   - StoreCategorySRMSupport
 
@@ -128,7 +128,7 @@
   icon: { sprite: _Shitmed/Clothing/Back/Duffels/abductor.rsi, state: icon }
   productEntity: CrateSRMMedicalSupplies
   cost:
-    PietySRM: 5
+    PietySRM: 18
   categories:
   - StoreCategorySRMSupport
 
@@ -139,7 +139,7 @@
   icon: { sprite: Objects/Specific/Medical/defibsmall.rsi, state: icon }
   productEntity: CrateSRMDefibrillator
   cost:
-    PietySRM: 2
+    PietySRM: 4
   categories:
   - StoreCategorySRMSupport
 
@@ -150,31 +150,11 @@
   icon: { sprite: Clothing/Eyes/Goggles/nightvision.rsi, state: icon }
   productEntity: ClothingEyesNightVisionGoggles
   cost:
-    PietySRM: 8
+    PietySRM: 20
   categories:
   - StoreCategorySRMSupport
 
-- type: listing
-  id: StoreListingSRMNVgMedical
-  name: Медицинские очки ночного виденья
-  description: Очки ночного видения со встроенными медицинскими стёклами, пригодятся тем, кто работает в условиях низкой освещённости.
-  icon: { sprite: Clothing/Eyes/Goggles/medical_nightvision.rsi, state: icon }
-  productEntity: ClothingEyesNightVisionMedicalGoggles
-  cost:
-    PietySRM: 10
-  categories:
-  - StoreCategorySRMSupport
 
-- type: listing
-  id: StoreListingSRMNvgAdvanced
-  name: Продвинутые очки ночного видения
-  description: Усовершенствованные очки ночного видения, улучшенные возможностью считывать идентификационные данные человека издалека.
-  icon: { sprite: Clothing/Eyes/Goggles/security_nightvision.rsi, state: icon }
-  productEntity: ClothingEyesNightVisionSecurityGoggles
-  cost:
-    PietySRM: 10
-  categories:
-  - StoreCategorySRMSupport
 
 - type: listing
   id: StoreListingSRMThermoMonocle
@@ -183,7 +163,7 @@
   icon: { sprite: Clothing/Eyes/Goggles/monocle_thermal.rsi, state: icon }
   productEntity: ClothingEyesThermalVisionMonocle
   cost:
-    PietySRM: 10
+    PietySRM: 40
   categories:
   - StoreCategorySRMSupport
 
@@ -205,7 +185,7 @@
   icon: { sprite: Objects/Specific/Medical/healthanalyzer.rsi, state: icon }
   productEntity: HandheldHealthAnalyzer
   cost:
-    PietySRM: 0
+    PietySRM: 1
   categories:
   - StoreCategorySRMSupport
 
@@ -216,7 +196,7 @@
   icon: { sprite: Objects/Consumable/Food/bay_food.rsi, state: meatmre }
   productEntity: BoxMRE
   cost:
-    PietySRM: 0
+    PietySRM: 1
   categories:
   - StoreCategorySRMSupport
 
@@ -264,7 +244,7 @@
   icon: { sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi, state: army_crate }
   productEntity: CrateMaterialPlasteel
   cost:
-    PietySRM: 1
+    PietySRM: 2
   categories:
   - StoreCategorySRMMaterials
 
@@ -275,7 +255,7 @@
   icon: { sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi, state: army_crate }
   productEntity: CrateMaterialPlastic
   cost:
-    PietySRM: 1
+    PietySRM: 2
   categories:
   - StoreCategorySRMMaterials
 
@@ -286,7 +266,7 @@
   icon: { sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi, state: army_crate }
   productEntity: CrateMaterialSteel
   cost:
-    PietySRM: 1
+    PietySRM: 2
   categories:
   - StoreCategorySRMMaterials
 
@@ -297,7 +277,7 @@
   icon: { sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi, state: army_crate }
   productEntity: CrateMaterialGlass
   cost:
-    PietySRM: 1
+    PietySRM: 2
   categories:
   - StoreCategorySRMMaterials
 
