@@ -256,15 +256,6 @@
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
-- type: cargoProduct
-  id: Shuttle20mmAmmoGyrostableGeneric
-  icon:
-    sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/screamer.rsi
-    state: base-gyrostable
-  product: Crate20mmAmmoGyrostable
-  cost: 6000
-  category: cargoproduct-category-name-shuttleammo
-  group: genericAmmo
 
 #35mm Scout
 
@@ -284,7 +275,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
     state: base-gyrostable
   product: Crate35mmAmmoGyrostable
-  cost: 7500
+  cost: 17500
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -296,7 +287,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/shortbow.rsi
     state: shortbow
   product: Crate48mmAmmo
-  cost: 18000
+  cost: 9000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -318,7 +309,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
     state: base-plasma
   product: Crate50mmAmmoPlasma
-  cost: 6000
+  cost: 15000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -328,7 +319,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/striker.rsi
     state: base-gyrostable
   product: Crate50mmAmmoGyrostable
-  cost: 9000
+  cost: 20000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -340,7 +331,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/azimuth.rsi
     state: azimuthrocket
   product: Crate60mmAmmo
-  cost: 21000
+  cost: 11000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -374,7 +365,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/resolute.rsi
     state: base-plasma
   product: Crate90mmAmmoPlasma
-  cost: 12000
+  cost: 18000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -384,7 +375,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Magazine/resolute.rsi
     state: base-gyrostable
   product: Crate90mmAmmoGyrostable
-  cost: 18000
+  cost: 25000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -396,7 +387,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/arbalest.rsi
     state: arbalest
   product: Crate95mmAmmo
-  cost: 25000
+  cost: 12500
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -408,7 +399,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     state: apds
   product: Crate120mmAmmo
-  cost: 7000
+  cost: 6000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -418,7 +409,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     state: heat
   product: Crate120mmAmmoPlasma
-  cost: 14000
+  cost: 20000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -428,7 +419,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/anvil.rsi
     state: gyro
   product: Crate120mmAmmoGyrostable
-  cost: 21000
+  cost: 28000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -440,7 +431,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/gargoyle.rsi
     state: gargoyle
   product: Crate240mmAmmo
-  cost: 30000
+  cost: 15000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 
@@ -464,7 +455,7 @@
     sprite: _Crescent/Objects/Turrets/Ammunition/Cartridge/catapult.rsi
     state: catapult
   product: Crate330mmAmmo
-  cost: 36000
+  cost: 16000
   category: cargoproduct-category-name-shuttleammo
   group: genericAmmo
 

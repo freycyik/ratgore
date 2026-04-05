@@ -101,15 +101,15 @@
   category: cargoproduct-category-name-shuttle
   group: generic
 
-#- type: cargoProduct
-#  id: ShuttleGunGeneric35mmScout
-#  icon:
-#    sprite: _Crescent/Objects/Turrets/Projectile/minigun.rsi
-#    state: minigun
-#  product: CrateShuttlegun35mmScout
-#  cost: 10000
-#  category: cargoproduct-category-name-shuttle
-#  group: generic
+- type: cargoProduct
+  id: ShuttleGunGeneric35mmScout
+  icon:
+   sprite: _Crescent/Objects/Turrets/Projectile/minigun.rsi
+   state: minigun
+  product: CrateShuttlegun35mmScout
+  cost: 10000
+  category: cargoproduct-category-name-shuttle
+  group: generic
 
 #- type: cargoProduct
 #  id: ShuttleGunGeneric50mmStriker
