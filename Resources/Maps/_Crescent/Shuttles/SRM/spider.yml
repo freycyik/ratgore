@@ -1211,14 +1211,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ComputerIFF
-  entities:
-  - uid: 116
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,2.5
-      parent: 1
 - proto: ComputerTabletopAdvancedRadar
   entities:
   - uid: 115
@@ -1226,6 +1218,17 @@ entities:
     - type: Transform
       pos: 1.5,5.5
       parent: 1
+- proto: ComputerTabletopIFFSyndicate
+  entities:
+  - uid: 116
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -0.5,2.5
+      parent: 1
+    - type: IFFConsole
+      heatDissipation: 1.5
+      heatGeneration: 2
 - proto: ComputerTabletopPowerMonitoring
   entities:
   - uid: 117
