@@ -1,3 +1,18 @@
+
+- type: loadout
+  id: LoadoutBeltSheathSRMKhopesh
+  category: Belt
+  cost: 0
+  items:
+    - ClothingBeltSheathKhopeshFilled
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - GovernorDSM
+        - OverseerSRM
+
 - type: loadout
   id: LoadoutBeltSheathSRMDuelingKhopesh
   category: Belt
