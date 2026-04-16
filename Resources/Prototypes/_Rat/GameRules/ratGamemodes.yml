@@ -36,13 +36,13 @@
         IFFColor: "#36B500"
       Tatsumoto:
         gameMapID: Tatsumoto
-        posX: -7000
+        posX: -6000
         posY: 1000
         IFFColor: White
         IFFFaction: SHI
       Refuge:
         gameMapID: Refuge
-        posX: -7000
+        posX: -3000
         posY: 7000
         IFFColor: Green
         IFFFaction: SRM
@@ -54,17 +54,15 @@
         posY: 1000
         IFFColor: IndianRed
         IFFFaction: TFSC
-        randomOffsetX: 3000
-        randomOffsetY: 3000
       Jackal:
         gameMapID: Jackal
-        posX: 7000
+        posX: 8000
         posY: -2000
         IFFColor: IndianRed
         IFFFaction: TFSC
       Dawnbreaker:
         gameMapID: Dawnbreaker
-        posX: 8000
+        posX: 6000
         posY: -1000
         IFFColor: IndianRed
         IFFFaction: TFSC
@@ -76,7 +74,7 @@
         IFFFaction: TFSC
       TribalHideout:
         gameMapID: TribalHideout
-        posX: -7000
+        posX: 2000
         posY: -7000
         IFFColor: White
         IFFFaction: TAP
