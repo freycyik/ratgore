@@ -361,6 +361,17 @@
   categories:
   - StoreCategoryGSCSuits
 
+- type: listing
+  id: StoreListingHandHeldMassScannerRatGorlax
+  name: Handheld mass scanneer
+  description: A rather competent handheld mass scanner design pioneered by pre-collapse Gorlex Security Consulting.
+  icon: { sprite: /Textures/Objects/Tools/handheld_mass_scanner.rsi, state: icon }
+  productEntity: HandHeldMassScannerRatGorlax
+  cost:
+    PlunderGSC: 1
+  categories:
+  - StoreCategoryGSCSuits
+
 #SUITS END
 
 #AMMO
