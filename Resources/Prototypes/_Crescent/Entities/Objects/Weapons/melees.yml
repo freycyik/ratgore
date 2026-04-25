@@ -24,8 +24,8 @@
     lightRangeModifier: 1.15
     maxTargets: 4
   - type: Reflect
-    reflectProb: .75
-    spread: 75
+    reflectProb: .35
+    spread: 35
   - type: Item
     size: Normal
     shape:
